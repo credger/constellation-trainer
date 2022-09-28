@@ -1,0 +1,92 @@
+#parent{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    background-color: lightgrey;
+    margin: 50px auto 50px auto;
+}
+
+#leftSideBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 18%;
+    background-color: darkseagreen;
+}
+
+#mainBody{
+    height: 100%;
+    width: 67%;
+    background-color: #00001a;
+}
+
+#rightSideBar{
+    height: 100%;
+    width: 15%;
+    background-color:lightskyblue;
+}
+
+#toggleSwitchContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+    width: 90%;
+    background-color: burlywood;
+    margin-top: 25px;
+}
+
+#sortButtonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: coral;
+    height: fit-content;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.sortButton{
+    margin: 20px 0px 20px 0px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+#arrowButtonContainer{
+    background-color: orchid;
+    height: 300px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.arrowButton{
+    height: 50px;
+    width: auto;
+}
+
+.toggleFeature{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 60%;
+    height: fit-content;
+}
+
+
+.nameList{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    border-top: 1px solid black;
+}
+
+
+.listNumber{
+    width: 60px;
+}
