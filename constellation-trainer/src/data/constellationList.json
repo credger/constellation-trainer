@@ -1,0 +1,134 @@
+[
+    {
+        "Key": 0,
+        "Name": "Andromeda"
+    },
+    {
+        "Key": 1,
+        "Name": "Aquarius"
+    },
+    {
+        "Key": 2,
+        "Name": "Aquila"
+    },
+    {
+        "Key": 3,
+        "Name": "Bootes"
+    },
+    {
+        "Key": 4,
+        "Name": "Cancer"
+    },
+    {
+        "Key": 5,
+        "Name": "Canis"
+    },
+    {
+        "Key": 6,
+        "Name": "Capricornus"
+    },
+    {
+        "Key": 7,
+        "Name": "Cassiopeia"
+    },
+    {
+        "Key": 8,
+        "Name": "Cepheus"
+    },
+    {
+        "Key": 9,
+        "Name": "Cetus"
+    },
+    {
+        "Key": 10,
+        "Name": "Crater"
+    },
+    {
+        "Key": 11,
+        "Name": "Cygnus"
+    },
+    {
+        "Key": 12,
+        "Name": "Draco"
+    },
+    {
+        "Key": 13,
+        "Name": "Eridanus"
+    },
+    {
+        "Key": 14,
+        "Name": "Gemini"
+    },
+    {
+        "Key": 15,
+        "Name": "Hercules"
+    },
+    {
+        "Key": 16,
+        "Name": "Hydra"
+    },
+    {
+        "Key": 17,
+        "Name": "Leo"
+    },
+    {
+        "Key": 18,
+        "Name": "Lyra"
+    },
+    {
+        "Key": 19,
+        "Name": "Major"
+    },
+    {
+        "Key": 20,
+        "Name": "Major"
+    },
+    {
+        "Key": 21,
+        "Name": "Minor"
+    },
+    {
+        "Key": 22,
+        "Name": "Ophiuchus"
+    },
+    {
+        "Key": 23,
+        "Name": "Orion"
+    },
+    {
+        "Key": 24,
+        "Name": "Pegasus"
+    },
+    {
+        "Key": 25,
+        "Name": "Perseus"
+    },
+    {
+        "Key": 26,
+        "Name": "Pisces"
+    },
+    {
+        "Key": 27,
+        "Name": "Sagittarius"
+    },
+    {
+        "Key": 28,
+        "Name": "Scorpius"
+    },
+    {
+        "Key": 29,
+        "Name": "Taurus"
+    },
+    {
+        "Key": 30,
+        "Name": "Ursa"
+    },
+    {
+        "Key": 31,
+        "Name": "Ursa"
+    },
+    {
+        "Key": 32,
+        "Name": "Virgo"
+    }
+]

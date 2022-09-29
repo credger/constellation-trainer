@@ -22,9 +22,7 @@
     background-color: #00001a;
 }
 
-#rightSideBar{
-    height: 100%;
-    width: 15%;
+.nameList{
     background-color:lightskyblue;
 }
 
@@ -90,3 +88,9 @@
 .listNumber{
     width: 60px;
 }
+
+#rightSideBar{
+    width: 15%;
+    overflow-y: auto;
+}
+

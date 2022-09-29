@@ -31,13 +31,12 @@ const LeftSideBar = () => {
                 <button className = 'sortButton'>Sort Random</button>  
             </div>
             <div id = 'arrowButtonContainer'>
-                <img src = {upArrow} class = 'arrowButton'></img>
+                <img src = {upArrow} className = 'arrowButton'></img>
                 <div>
-                    <img src = {leftArrow} class = 'arrowButton'></img>
-                    <img src = {rightArrow} class = 'arrowButton'></img>
+                    <img src = {leftArrow} className = 'arrowButton'></img>
+                    <img src = {rightArrow} className = 'arrowButton'></img>
                 </div>
-                <img src = {downArrow} class = 'arrowButton'></img>
-
+                <img src = {downArrow} className = 'arrowButton'></img>
             </div>
 
         </div>
