@@ -21,7 +21,7 @@
     },
     {
         "Key": 5,
-        "Name": "Canis"
+        "Name": "Canis Major"
     },
     {
         "Key": 6,
@@ -77,58 +77,46 @@
     },
     {
         "Key": 19,
-        "Name": "Major"
-    },
-    {
-        "Key": 20,
-        "Name": "Major"
-    },
-    {
-        "Key": 21,
-        "Name": "Minor"
-    },
-    {
-        "Key": 22,
         "Name": "Ophiuchus"
     },
     {
-        "Key": 23,
+        "Key": 20,
         "Name": "Orion"
     },
     {
-        "Key": 24,
+        "Key": 21,
         "Name": "Pegasus"
     },
     {
-        "Key": 25,
+        "Key": 22,
         "Name": "Perseus"
     },
     {
-        "Key": 26,
+        "Key": 23,
         "Name": "Pisces"
     },
     {
-        "Key": 27,
+        "Key": 24,
         "Name": "Sagittarius"
     },
     {
-        "Key": 28,
+        "Key": 25,
         "Name": "Scorpius"
     },
     {
-        "Key": 29,
+        "Key": 26,
         "Name": "Taurus"
     },
     {
-        "Key": 30,
-        "Name": "Ursa"
+        "Key": 27,
+        "Name": "Ursa Major"
     },
     {
-        "Key": 31,
-        "Name": "Ursa"
+        "Key": 28,
+        "Name": "Ursa Minor"
     },
     {
-        "Key": 32,
+        "Key": 29,
         "Name": "Virgo"
     }
 ]
