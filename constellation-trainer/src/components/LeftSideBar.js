@@ -5,14 +5,20 @@ import downArrow from '../icons/arrow-down-bold.svg'
 import leftArrow from '../icons/arrow-left-bold.svg'
 import rightArrow from '../icons/arrow-right-bold.svg'
 import shuffle from './fisherYatesShuffle.js'
+import { isCompositeComponent } from 'react-dom/test-utils'
 
 const LeftSideBar = (props) => {
 
-    const x = [...Array(30).keys()]
-    const shuffleList = () => {
-        console.log('clicked')
-        props.o2(shuffle(x))
+    const alphabetizeList = () => {
+        const x = Object.create(props.n1)
+        props.o2(x)
     }
+
+    const shuffleList = () => {
+        const y = Object.create(props.o1)  //Object.create avoids reference
+        props.o2(shuffle(y))
+    }
+
 
     return(
         <div id = 'leftSideBar'>
@@ -35,7 +41,7 @@ const LeftSideBar = (props) => {
                 </div>
             </div>
             <div id = 'sortButtonContainer'>
-                <button className = 'sortButton'>Sort Alphabetical</button>
+                <button onClick={alphabetizeList} className = 'sortButton'>Sort Alphabetical</button>
                 <button onClick={shuffleList} className = 'sortButton'>Sort Random</button>  
             </div>
             <div id = 'arrowButtonContainer'>
