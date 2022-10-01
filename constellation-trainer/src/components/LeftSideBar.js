@@ -4,8 +4,16 @@ import upArrow from '../icons/arrow-up-bold.svg'
 import downArrow from '../icons/arrow-down-bold.svg'
 import leftArrow from '../icons/arrow-left-bold.svg'
 import rightArrow from '../icons/arrow-right-bold.svg'
+import shuffle from './fisherYatesShuffle.js'
 
-const LeftSideBar = () => {
+const LeftSideBar = (props) => {
+
+    const x = [...Array(30).keys()]
+    const shuffleList = () => {
+        console.log('clicked')
+        props.o2(shuffle(x))
+    }
+
     return(
         <div id = 'leftSideBar'>
             <div id = 'toggleSwitchContainer'>
@@ -28,7 +36,7 @@ const LeftSideBar = () => {
             </div>
             <div id = 'sortButtonContainer'>
                 <button className = 'sortButton'>Sort Alphabetical</button>
-                <button className = 'sortButton'>Sort Random</button>  
+                <button onClick={shuffleList} className = 'sortButton'>Sort Random</button>  
             </div>
             <div id = 'arrowButtonContainer'>
                 <img src = {upArrow} className = 'arrowButton'></img>
