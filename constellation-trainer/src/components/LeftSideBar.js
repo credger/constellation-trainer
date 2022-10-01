@@ -5,7 +5,8 @@ import downArrow from '../icons/arrow-down-bold.svg'
 import leftArrow from '../icons/arrow-left-bold.svg'
 import rightArrow from '../icons/arrow-right-bold.svg'
 import shuffle from './fisherYatesShuffle.js'
-import { isCompositeComponent } from 'react-dom/test-utils'
+import ToggleSwitchDefaultChecked from './ToggleSwitchDefaultChecked'
+
 
 const LeftSideBar = (props) => {
 
@@ -37,7 +38,7 @@ const LeftSideBar = (props) => {
                 </div>
                 <div className = 'toggleFeature'>
                     <p>List</p>
-                    <ToggleSwitch />
+                    <ToggleSwitchDefaultChecked s1 = {props.l1} s2 = {props.l2}  />
                 </div>
             </div>
             <div id = 'sortButtonContainer'>
