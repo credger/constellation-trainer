@@ -1,8 +1,8 @@
 #parent{
     display: flex;
     flex-direction: row;
-    height: 98vh;
-    width: 98vw;
+    height: 92vh;
+    width: 92vw;
     background-color: lightgrey;
     margin: 50px auto 50px auto;
 }
@@ -51,6 +51,10 @@
 }
 
 #arrowButtonContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: orchid;
     height: 300px;
     width: 90%;
@@ -80,6 +84,16 @@
     border-top: 1px solid black;
     background-color:lightskyblue;
 }
+
+.nameListSelected{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    border-top: 1px solid black;
+    background-color:green;
+}
+
 
 .nameList:hover{
     background-color: lightgray;

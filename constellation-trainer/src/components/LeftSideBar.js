@@ -11,12 +11,12 @@ import ToggleSwitchDefaultChecked from './ToggleSwitchDefaultChecked'
 const LeftSideBar = (props) => {
 
     const alphabetizeList = () => {
-        const x = Object.create(props.n1)
+        const x = Object.create(props.n1) //Object.create avoids reference
         props.o2(x)
     }
 
     const shuffleList = () => {
-        const y = Object.create(props.o1)  //Object.create avoids reference
+        const y = Object.create(props.o1)  
         props.o2(shuffle(y))
     }
 
@@ -26,7 +26,7 @@ const LeftSideBar = (props) => {
             <div id = 'toggleSwitchContainer'>
                 <div className = 'toggleFeature'>
                     <p>Lines</p>
-                    <ToggleSwitch />
+                    <ToggleSwitchDefaultChecked />
                 </div>
                 <div className = 'toggleFeature'>
                     <p>Background</p>
@@ -34,7 +34,7 @@ const LeftSideBar = (props) => {
                 </div>
                 <div className = 'toggleFeature'>
                     <p>Names</p>
-                    <ToggleSwitch />
+                    <ToggleSwitchDefaultChecked />
                 </div>
                 <div className = 'toggleFeature'>
                     <p>List</p>
