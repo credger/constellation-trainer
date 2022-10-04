@@ -6,6 +6,8 @@ import leftArrow from '../icons/arrow-left-bold.svg'
 import rightArrow from '../icons/arrow-right-bold.svg'
 import shuffle from './fisherYatesShuffle.js'
 import ToggleSwitchDefaultChecked from './ToggleSwitchDefaultChecked'
+import cnames from '../data/constellationList.json'
+import { useEffect } from 'react'
 
 
 const LeftSideBar = (props) => {
@@ -16,11 +18,13 @@ const LeftSideBar = (props) => {
     }
 
     const shuffleList = () => {
-        const y = Object.create(props.o1)  
+        const y = Object.create(props.o1) 
         props.o2(shuffle(y))
     }
 
 
+
+  
     return(
         <div id = 'leftSideBar'>
             <div id = 'toggleSwitchContainer'>

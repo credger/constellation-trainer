@@ -7,18 +7,9 @@ import cnames from '../data/constellationList.json'
 const RightSideBar = (props) => {
 
 
-    const k = 'nameList'
-    const j = 'nameListSelected'
-    console.log(props.d1)
-
-
-
-
     const x = props.l1
     if(x == false){
-        const rightSideBar = React.createElement('div', {id: 'rightSideBar',})
-
-        return rightSideBar
+        return null
     }
 
 
