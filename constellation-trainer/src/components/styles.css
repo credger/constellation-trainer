@@ -126,49 +126,48 @@
 }
 
 .testStar{
+    position: absolute;
     background-color: white;
-    height: 20px;
-    width: 20px;
-    border-radius: 25px;
+    height: 6px;
+    width: 6px;
+    border-radius: 3px;
 
 }
 
-#one{
+
+
+
+/* #one{
     position: absolute;
-    right: calc(50% - 101*4px);
-    top: calc(50% + 27*4px);
+    right: 17.5%;
+    bottom: 62.72%;
     background-color: yellow;
-}
+} */
 
 
-#two{
+
+.wrapper {
+    width: 100%;
+    /* whatever width you want */
+    display: inline-block;
+    position: relative;
+  }
+  .wrapper:after {
+    padding-top: 62.5%;
+    /* 8:5 ratio */
+    display: block;
+    content: '';
+  }
+
+  .fixedAspectRatio {
     position: absolute;
-    right: calc(50% - 24*4px);
-    top: calc(50% + 73*4px);
-    background-color: lightcoral;
-}
-
-
-#three{
-    position: absolute;
-    right: calc(50% + 0px);
-    top: calc(50% + 0px);
-    background-color: lawngreen;
-}
-
-#four{
-    position: absolute;
-    right: calc(50% + 65*4px);
-    top: calc(50% + 8*4px);
-    background-color:cyan
-}
-
-
-#five{
-    position: absolute;
-    right: calc(50% + 100*4px);
-    top: calc(50% - 52*4px);
-    background-color:firebrick
-}
-
-
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* fill parent */
+    background-color: black;
+    /* let's see it! */
+    color: white;
+    transform: rotate(180deg);
+  }

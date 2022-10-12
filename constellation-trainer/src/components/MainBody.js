@@ -1,5 +1,6 @@
 import './styles.css'
 import React from 'react'
+import DrawStars from './DrawStars'
 
 
 const MainBody = (props) => {
@@ -26,8 +27,27 @@ const MainBody = (props) => {
             <div className = 'testStar' id = 'three'></div>
             <div className = 'testStar' id = 'four'></div>
             <div className = 'testStar' id = 'five'></div> */}
+
+
+            <div className="wrapper">
+                    <DrawStars />
+            </div>
+
+            
         </div>
     )
 }
 
 export default MainBody
+
+
+
+
+
+{/* <div className="wrapper">
+<div className="fixedAspectRatio">
+    This is your div with the specified aspect ratio.
+    <div className = 'testStar' id = 'center'></div>
+    <DrawStars />
+</div>
+</div> */}
