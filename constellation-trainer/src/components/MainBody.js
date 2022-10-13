@@ -30,7 +30,7 @@ const MainBody = (props) => {
 
 
             <div className="wrapper">
-                    <DrawStars />
+                    <DrawStars d1 = {x}/>
             </div>
 
             

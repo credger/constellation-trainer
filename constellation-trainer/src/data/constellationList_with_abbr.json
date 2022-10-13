@@ -1,0 +1,152 @@
+[
+    {
+        "Key": "0",
+        "Name": "Andromeda",
+        "Abbr": "And"
+    },
+    {
+        "Key": "1",
+        "Name": "Aquarius",
+        "Abbr": "Aqr"
+    },
+    {
+        "Key": "2",
+        "Name": "Aquila",
+        "Abbr": "Aql"
+    },
+    {
+        "Key": "3",
+        "Name": "Bootes",
+        "Abbr": "Boo"
+    },
+    {
+        "Key": "4",
+        "Name": "Cancer",
+        "Abbr": "Cnc"
+    },
+    {
+        "Key": "5",
+        "Name": "Canis Major",
+        "Abbr": "CMa"
+    },
+    {
+        "Key": "6",
+        "Name": "Capricornus",
+        "Abbr": "Cap"
+    },
+    {
+        "Key": "7",
+        "Name": "Cassiopeia",
+        "Abbr": "Cas"
+    },
+    {
+        "Key": "8",
+        "Name": "Cepheus",
+        "Abbr": "Cep"
+    },
+    {
+        "Key": "9",
+        "Name": "Cetus",
+        "Abbr": "Cet"
+    },
+    {
+        "Key": "10",
+        "Name": "Crater",
+        "Abbr": "Crt"
+    },
+    {
+        "Key": "11",
+        "Name": "Cygnus",
+        "Abbr": "Cyg"
+    },
+    {
+        "Key": "12",
+        "Name": "Draco",
+        "Abbr": "Dra"
+    },
+    {
+        "Key": "13",
+        "Name": "Eridanus",
+        "Abbr": "Eri"
+    },
+    {
+        "Key": "14",
+        "Name": "Gemini",
+        "Abbr": "Gem"
+    },
+    {
+        "Key": "15",
+        "Name": "Hercules",
+        "Abbr": "Her"
+    },
+    {
+        "Key": "16",
+        "Name": "Hydra",
+        "Abbr": "Hya"
+    },
+    {
+        "Key": "17",
+        "Name": "Leo",
+        "Abbr": "Leo"
+    },
+    {
+        "Key": "18",
+        "Name": "Lyra",
+        "Abbr": "Lyr"
+    },
+    {
+        "Key": "19",
+        "Name": "Ophiuchus",
+        "Abbr": "Oph"
+    },
+    {
+        "Key": "20",
+        "Name": "Orion",
+        "Abbr": "Ori"
+    },
+    {
+        "Key": "21",
+        "Name": "Pegasus",
+        "Abbr": "Peg"
+    },
+    {
+        "Key": "22",
+        "Name": "Perseus",
+        "Abbr": "Per"
+    },
+    {
+        "Key": "23",
+        "Name": "Pisces",
+        "Abbr": "Psc"
+    },
+    {
+        "Key": "24",
+        "Name": "Sagittarius",
+        "Abbr": "Sgr"
+    },
+    {
+        "Key": "25",
+        "Name": "Scorpius",
+        "Abbr": "Sco"
+    },
+    {
+        "Key": "26",
+        "Name": "Taurus",
+        "Abbr": "Tau"
+    },
+    {
+        "Key": "27",
+        "Name": "Ursa Major",
+        "Abbr": "UMa"
+    },
+    {
+        "Key": "28",
+        "Name": "Ursa Minor",
+        "Abbr": "UMi"
+    },
+    {
+        "Key": "29",
+        "Name": "Virgo",
+        "Abbr": "Vir"
+    }
+]
