@@ -19,18 +19,16 @@ const MainBody = (props) => {
 
     }
 
+
+
     return(
         <div className = {getMainBodyClass()}>
             <p id = 'testDisplay'>{x}</p>   
-            {/* <div className = 'testStar' id = 'one'></div>
-            <div className = 'testStar' id = 'two'></div>
-            <div className = 'testStar' id = 'three'></div>
-            <div className = 'testStar' id = 'four'></div>
-            <div className = 'testStar' id = 'five'></div> */}
-
-
             <div className="wrapper">
                     <DrawStars d1 = {x}/>
+
+                    {/* <svg width="100%" height="100%"><line x1="10%" y1="10%" x2="20%" y2="20%" stroke="red"/></svg> */}
+                    
             </div>
 
             

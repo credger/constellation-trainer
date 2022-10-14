@@ -7,6 +7,11 @@ import './styles.css'
 import cnames from '../data/constellationList.json'
 import { useEffect } from 'react'
 
+
+
+
+
+
 const Parent = () => {
 
     const numbers = [...Array(30).keys()]         //Array 0:29
@@ -17,13 +22,38 @@ const Parent = () => {
 
     const[list, setList] = useState(true)
 
+
     useEffect(() => {
         setDisplay(cnames[order[0]].Name)  //Reset display after sort
     },[order])
 
+    const handleKeyDown = event => {
+        if(event.key == 'ArrowRight'){
+            for(let i=0; i<cnames.length; i++){
+                if(cnames[order[i]].Name == display){
+                    if(i<(cnames.length-1)){
+                        setDisplay(cnames[order[i+1]].Name)
+                    } else{setDisplay(cnames[order[0]].Name)}
+                    break
+                }
+            }
+        }
+
+        if(event.key == 'ArrowLeft'){
+            for(let i=0; i<cnames.length; i++){
+                if(cnames[order[i]].Name == display){
+                    if(i>0){
+                        setDisplay(cnames[order[i-1]].Name)
+                    } else{setDisplay(cnames[order[cnames.length-1]].Name)}
+                    break
+                }
+            }
+        }
+      };
+
 
     return(
-        <div id = 'parent'>
+        <div id = 'parent' tabIndex={0} onKeyDown={handleKeyDown}>
             <LeftSideBar o1 = {order} o2 = {setOrder} n1 = {numbers} l1 = {list} l2 = {setList} d2 = {setDisplay}/>
             <MainBody d1 = {display} l1 = {list}/>
             <RightSideBar o1 = {order} d1={display} d2 = {setDisplay} o1 = {order} l1 = {list}/>

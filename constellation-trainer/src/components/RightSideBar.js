@@ -1,17 +1,17 @@
 import './styles.css'
 import React from 'react'
-import cnames from '../data/constellationList.json'
+import cnames from '../data/constellationList_with_abbr.json'
 
 
 
 const RightSideBar = (props) => {
 
 
+
     const x = props.l1
     if(x == false){
         return null
     }
-
 
     else{
         let elements= [];
@@ -27,7 +27,7 @@ const RightSideBar = (props) => {
                     return notSelected
                 }
             }
-        
+
             let rowElements = []
             rowElements.push(React.createElement('p', {className: 'listNumber', key: 1}, i+1,'.'))
             rowElements.push(React.createElement('p', {key: 2}, cnames[props.o1[i]].Name))

@@ -4,13 +4,11 @@ import cnames from '../data/constellationList_with_abbr.json'
 
 const DrawStars = (props) => {
 
-    console.log(props.d1)
     let c = null
     const currentDisplay = props.d1
     for(let i=0; i<cnames.length; i++){
         if (cnames[i]['Name'] == props.d1){
             c = cnames[i]['Abbr']
-            console.log(c)
             break
         }
     }
