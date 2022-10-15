@@ -23,6 +23,7 @@ const Parent = () => {
 
     const[list, setList] = useState(true)
     const[label, setLabel] = useState(true)
+    const[up, setUp] = useState(false) //Used to set behavior of upArrow keyDown and keyUp
 
 
     useEffect(() => {
@@ -35,6 +36,8 @@ const Parent = () => {
     useEffect(() => {
         ref.current.focus();
     }, []);
+
+    
 
     const handleKeyDown = event => {
         if(event.key == 'ArrowRight'){
@@ -58,11 +61,31 @@ const Parent = () => {
                 }
             }
         }
-      };
+
+        if(event.key == 'ArrowUp'){
+            console.log('arrowUp')
+            if(label == false){
+                setLabel(true) 
+                setUp(true)
+            }
+        }
+    };
+    
+    //Need to make compatible with toggle display
+    const handleKeyUp = event => {
+        if(event.key == 'ArrowUp'){
+            if(up == true){
+                setLabel(false)
+                setUp(false)
+            }
+
+        }
+    }
+    
 
 
     return(
-        <div id = 'parent' ref={ref} tabIndex={-1} onKeyDown={handleKeyDown}>
+        <div id = 'parent' ref={ref} tabIndex={-1} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}>
             <LeftSideBar o1 = {order} o2 = {setOrder} n1 = {numbers} l1 = {list} l2 = {setList} d2 = {setDisplay} label1 = {label} label2 = {setLabel}/>
             <MainBody d1 = {display} l1 = {list} label1 = {label} label2 = {setLabel}/>
             <RightSideBar o1 = {order} d1={display} d2 = {setDisplay} o1 = {order} l1 = {list}/>
