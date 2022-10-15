@@ -6,9 +6,7 @@ import cnames from '../data/constellationList_with_abbr.json'
 
 const RightSideBar = (props) => {
 
-
-
-    const x = props.l1
+    const x = props.l1 //State of list toggle
     if(x == false){
         return null
     }

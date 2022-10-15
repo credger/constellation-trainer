@@ -16,14 +16,28 @@ const MainBody = (props) => {
         else{
             return showList
         }
-
     }
+
+    const showLabel = 'mainBodyShowLabel'
+    const hideLabel = 'mainBodyHideLabel'
+    const getMainBodyLabelClass = () => {
+
+        const z = props.label1
+        console.log(z)
+        if(z == false){
+            return hideLabel
+        }
+        else{
+            return showLabel
+        }
+    }
+
 
 
 
     return(
         <div className = {getMainBodyClass()}>
-            <p id = 'testDisplay'>{x}</p>   
+            <p className = {getMainBodyLabelClass()}>{x}</p>   
             <div className="wrapper">
                     <DrawStars d1 = {x}/>
 

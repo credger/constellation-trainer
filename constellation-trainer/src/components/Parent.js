@@ -5,7 +5,8 @@ import shuffle from './fisherYatesShuffle.js'
 import {useState} from 'react'
 import './styles.css'
 import cnames from '../data/constellationList.json'
-import { useEffect } from 'react'
+import {useEffect} from 'react'
+import {useRef} from 'react'
 
 
 
@@ -21,11 +22,19 @@ const Parent = () => {
     const [display, setDisplay] = useState(firstName)
 
     const[list, setList] = useState(true)
+    const[label, setLabel] = useState(true)
 
 
     useEffect(() => {
         setDisplay(cnames[order[0]].Name)  //Reset display after sort
     },[order])
+
+
+    const ref = useRef(null);  //Focus on parent div on page load
+
+    useEffect(() => {
+        ref.current.focus();
+    }, []);
 
     const handleKeyDown = event => {
         if(event.key == 'ArrowRight'){
@@ -53,9 +62,9 @@ const Parent = () => {
 
 
     return(
-        <div id = 'parent' tabIndex={0} onKeyDown={handleKeyDown}>
-            <LeftSideBar o1 = {order} o2 = {setOrder} n1 = {numbers} l1 = {list} l2 = {setList} d2 = {setDisplay}/>
-            <MainBody d1 = {display} l1 = {list}/>
+        <div id = 'parent' ref={ref} tabIndex={-1} onKeyDown={handleKeyDown}>
+            <LeftSideBar o1 = {order} o2 = {setOrder} n1 = {numbers} l1 = {list} l2 = {setList} d2 = {setDisplay} label1 = {label} label2 = {setLabel}/>
+            <MainBody d1 = {display} l1 = {list} label1 = {label} label2 = {setLabel}/>
             <RightSideBar o1 = {order} d1={display} d2 = {setDisplay} o1 = {order} l1 = {list}/>
         </div>
     )
@@ -63,3 +72,6 @@ const Parent = () => {
 }
 
 export default Parent
+
+
+// https://bobbyhadz.com/blog/react-onkeydown-div

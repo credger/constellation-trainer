@@ -1,10 +1,9 @@
 #parent{
     display: flex;
     flex-direction: row;
-    height: 92vh;
-    width: 92vw;
+    height: 100vh;
+    width: 100vw;
     background-color: lightgrey;
-    margin: 50px auto 50px auto;
 }
 
 #leftSideBar{
@@ -118,11 +117,16 @@
 }
 
 
-#testDisplay{
+.mainBodyShowLabel{
     color: white;
     font-size: 36px;
     margin-top: 20px;
+}
 
+.mainBodyHideLabel{
+    color: black;
+    font-size: 36px;
+    margin-top: 20px;
 }
 
 .testStar{

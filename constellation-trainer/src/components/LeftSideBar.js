@@ -22,9 +22,6 @@ const LeftSideBar = (props) => {
         props.o2(shuffle(y))
     }
 
-
-
-  
     return(
         <div id = 'leftSideBar'>
             <div id = 'toggleSwitchContainer'>
@@ -37,8 +34,8 @@ const LeftSideBar = (props) => {
                     <ToggleSwitch />
                 </div>
                 <div className = 'toggleFeature'>
-                    <p>Names</p>
-                    <ToggleSwitchDefaultChecked />
+                    <p>Labels</p>
+                    <ToggleSwitchDefaultChecked s1 = {props.label1} s2 = {props.label2}/>
                 </div>
                 <div className = 'toggleFeature'>
                     <p>List</p>
