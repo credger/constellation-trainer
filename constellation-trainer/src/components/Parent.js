@@ -24,21 +24,21 @@ const Parent = () => {
     const[list, setList] = useState(true)
     const[label, setLabel] = useState(true)
     const[up, setUp] = useState(false) //Used to set behavior of upArrow keyDown and keyUp
+    const[lines, setLines] = useState(true)
+
 
 
     useEffect(() => {
         setDisplay(cnames[order[0]].Name)  //Reset display after sort
     },[order])
 
-
-    const ref = useRef(null);  //Focus on parent div on page load
-
+    //Focus on parent div on page load
+    const ref = useRef(null);  
     useEffect(() => {
         ref.current.focus();
     }, []);
 
-    
-
+    //Try to make this a seperate function
     const handleKeyDown = event => {
         if(event.key == 'ArrowRight'){
             for(let i=0; i<cnames.length; i++){
@@ -71,7 +71,7 @@ const Parent = () => {
         }
     };
     
-    //Need to make compatible with toggle display
+    //Needs work - gets reversed if up arrow and toggle done simultaneously
     const handleKeyUp = event => {
         if(event.key == 'ArrowUp'){
             if(up == true){
@@ -86,8 +86,8 @@ const Parent = () => {
 
     return(
         <div id = 'parent' ref={ref} tabIndex={-1} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}>
-            <LeftSideBar o1 = {order} o2 = {setOrder} n1 = {numbers} l1 = {list} l2 = {setList} d2 = {setDisplay} label1 = {label} label2 = {setLabel}/>
-            <MainBody d1 = {display} l1 = {list} label1 = {label} label2 = {setLabel}/>
+            <LeftSideBar o1 = {order} o2 = {setOrder} n1 = {numbers} l1 = {list} l2 = {setList} d2 = {setDisplay} label1 = {label} label2 = {setLabel} lines1 = {lines} lines2 = {setLines}/>
+            <MainBody d1 = {display} l1 = {list} label1 = {label} label2 = {setLabel} lines1 = {lines} lines2 = {setLines}/>
             <RightSideBar o1 = {order} d1={display} d2 = {setDisplay} o1 = {order} l1 = {list}/>
         </div>
     )

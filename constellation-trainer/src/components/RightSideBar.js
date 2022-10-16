@@ -4,6 +4,7 @@ import cnames from '../data/constellationList_with_abbr.json'
 
 
 
+
 const RightSideBar = (props) => {
 
     const x = props.l1 //State of list toggle
@@ -34,7 +35,9 @@ const RightSideBar = (props) => {
 
         const rightSideBar = React.createElement('div', {id: 'rightSideBar',}, elements)
 
-        return rightSideBar
+        return(
+            rightSideBar
+        )
     }
 }
 

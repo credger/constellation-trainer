@@ -5,6 +5,8 @@ import DrawStars from './DrawStars'
 
 const MainBody = (props) => {
     const x = props.d1
+    const j23 = props.lines1 //passing props to DrawStars and DrawLines
+ 
 
     const showList = 'mainBodyList'
     const hideList = 'mainBodyNoList'
@@ -39,10 +41,7 @@ const MainBody = (props) => {
         <div className = {getMainBodyClass()}>
             <p className = {getMainBodyLabelClass()}>{x}</p>   
             <div className="wrapper">
-                    <DrawStars d1 = {x}/>
-
-                    {/* <svg width="100%" height="100%"><line x1="10%" y1="10%" x2="20%" y2="20%" stroke="red"/></svg> */}
-                    
+                    <DrawStars d1 = {x} lines1 = {j23}/>
             </div>
 
             

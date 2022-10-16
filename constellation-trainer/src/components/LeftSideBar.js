@@ -24,10 +24,11 @@ const LeftSideBar = (props) => {
 
     return(
         <div id = 'leftSideBar'>
+            <h1>Constellation Trainer</h1>
             <div id = 'toggleSwitchContainer'>
                 <div className = 'toggleFeature'>
                     <p>Lines</p>
-                    <ToggleSwitchDefaultChecked />
+                    <ToggleSwitchDefaultChecked s1 = {props.lines1} s2 = {props.lines2} />
                 </div>
                 <div className = 'toggleFeature'>
                     <p>Background</p>
