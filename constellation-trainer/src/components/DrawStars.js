@@ -5,7 +5,7 @@ import DrawLines from './DrawLines'
 
 const DrawStars = (props) => {
     
-
+    
     let c = null
     const currentDisplay = props.d1
     for(let i=0; i<cnames.length; i++){
@@ -21,8 +21,13 @@ const DrawStars = (props) => {
     let stars = []
     for(let i = 0; i< coords.length; i++){
         if(coords[i]['C'] == c){
-            // console.log(coords[i])
-            stars.push(React.createElement('div', {className: 'testStar', key: coords[i]['HR'], style: {right: coords[i]['percentX'], bottom: coords[i]['percentY']}}))
+            //console.log(coords[i])
+            const starSize = String(Math.abs(parseFloat(coords[i]['V'])+(-6.5))*2)+"px"
+            const starRadius = String(Math.abs(parseFloat(coords[i]['V'])+(-6.5)))+"px"
+            console.log(starSize)
+            stars.push(React.createElement('div', {className: 'testStar', key: coords[i]['HR'],
+            style: {right: coords[i]['percentX'], bottom: coords[i]['percentY'],
+            height: starSize, width: starSize, borderRadius: starRadius }}))
         }
     }
 

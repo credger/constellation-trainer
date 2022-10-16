@@ -25,7 +25,7 @@ const MainBody = (props) => {
     const getMainBodyLabelClass = () => {
 
         const z = props.label1
-        console.log(z)
+        //console.log(z)
         if(z == false){
             return hideLabel
         }
