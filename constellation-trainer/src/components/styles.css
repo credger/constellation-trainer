@@ -171,3 +171,8 @@
     color: white;
     transform: rotate(180deg);
   }
+
+  .LineStyle{
+    stroke: red;
+    stroke-width: 1px;
+  }

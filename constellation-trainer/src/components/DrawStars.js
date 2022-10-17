@@ -25,10 +25,8 @@ const DrawStars = (props) => {
             //console.log(coords[i])
             const starSize = String(Math.abs(parseFloat(coords[i]['V'])+(-6.5))*2)+"px"
             const starRadius = String(Math.abs(parseFloat(coords[i]['V'])+(-6.5)))+"px"
-            console.log(starSize)
             const px = coords[i]['percentX']
             const py = coords[i]['percentY']
-            console.log('px = ',px)
             stars.push(React.createElement('div', {className: 'testStar', key: coords[i]['HR'],
             style: {right: `calc(${px} - ${starRadius})`, bottom: `calc(${py} - ${starRadius})`,
             height: starSize, width: starSize, borderRadius: starRadius }}))
