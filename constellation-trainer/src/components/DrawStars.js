@@ -2,6 +2,7 @@ import coords from '../data/percent3.json'
 import React from 'react'
 import cnames from '../data/constellationList_with_abbr.json'
 import DrawLines from './DrawLines'
+import { calculateNewValue } from '@testing-library/user-event/dist/utils'
 
 const DrawStars = (props) => {
     
@@ -25,8 +26,11 @@ const DrawStars = (props) => {
             const starSize = String(Math.abs(parseFloat(coords[i]['V'])+(-6.5))*2)+"px"
             const starRadius = String(Math.abs(parseFloat(coords[i]['V'])+(-6.5)))+"px"
             console.log(starSize)
+            const px = coords[i]['percentX']
+            const py = coords[i]['percentY']
+            console.log('px = ',px)
             stars.push(React.createElement('div', {className: 'testStar', key: coords[i]['HR'],
-            style: {right: coords[i]['percentX'], bottom: coords[i]['percentY'],
+            style: {right: `calc(${px} - ${starRadius})`, bottom: `calc(${py} - ${starRadius})`,
             height: starSize, width: starSize, borderRadius: starRadius }}))
         }
     }
@@ -41,3 +45,5 @@ const DrawStars = (props) => {
 }
 
 export default DrawStars
+
+//coords[i]['percentX']
