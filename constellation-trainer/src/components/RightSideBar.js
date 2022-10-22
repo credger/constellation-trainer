@@ -9,7 +9,8 @@ const RightSideBar = (props) => {
 
     const x = props.l1 //State of list toggle
     if(x == false){
-        return null
+        //return null
+        return <div id = 'emptyList'></div>
     }
 
     else{

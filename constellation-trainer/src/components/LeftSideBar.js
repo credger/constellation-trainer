@@ -4,11 +4,11 @@ import upArrow from '../icons/arrow-up-bold.svg'
 import downArrow from '../icons/arrow-down-bold.svg'
 import leftArrow from '../icons/arrow-left-bold.svg'
 import rightArrow from '../icons/arrow-right-bold.svg'
+import arrows from '../icons/arrows.png'
 import shuffle from './fisherYatesShuffle.js'
 import ToggleSwitchDefaultChecked from './ToggleSwitchDefaultChecked'
 import cnames from '../data/constellationList.json'
 import { useEffect } from 'react'
-
 
 const LeftSideBar = (props) => {
 
@@ -23,9 +23,9 @@ const LeftSideBar = (props) => {
     }
 
     return(
-        <div id = 'leftSideBar'>
+        <div id = 'leftSideBar' className = 'leftContainer'>
             <h1>Constellation Trainer</h1>
-            <div id = 'toggleSwitchContainer'>
+            <div id = 'toggleSwitchContainer' className = 'leftContainer'>
                 <div className = 'toggleFeature'>
                     <p>Lines</p>
                     <ToggleSwitchDefaultChecked s1 = {props.lines1} s2 = {props.lines2} />
@@ -43,17 +43,12 @@ const LeftSideBar = (props) => {
                     <ToggleSwitchDefaultChecked s1 = {props.l1} s2 = {props.l2}  />
                 </div>
             </div>
-            <div id = 'sortButtonContainer'>
+            <div id = 'sortButtonContainer' className = 'leftContainer'>
                 <button onClick={alphabetizeList} className = 'sortButton'>Sort Alphabetical</button>
                 <button onClick={shuffleList} className = 'sortButton'>Sort Random</button>  
             </div>
-            <div id = 'arrowButtonContainer'>
-                <img src = {upArrow} className = 'arrowButton'></img>
-                <div>
-                    <img src = {leftArrow} className = 'arrowButton'></img>
-                    <img src = {rightArrow} className = 'arrowButton'></img>
-                </div>
-                <img src = {downArrow} className = 'arrowButton'></img>
+            <div id = 'arrowButtonContainer' className = 'leftContainer'>
+                <img src = {arrows} className = 'arrowsImage'></img>
             </div>
 
         </div>

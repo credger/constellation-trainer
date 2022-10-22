@@ -20,7 +20,7 @@
     height: 32px;
     width: 64px;
     border-radius: 16px;
-    background-color: lightgray;
+    background-color: darkgray;
 }
 
 .toggleSlider:before{

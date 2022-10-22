@@ -5,8 +5,11 @@ import shuffle from './fisherYatesShuffle.js'
 import {useState} from 'react'
 import './styles.css'
 import cnames from '../data/constellationList.json'
+import React from 'react';
 import {useEffect} from 'react'
 import {useRef} from 'react'
+
+
 
 
 
@@ -69,6 +72,17 @@ const Parent = () => {
                 setUp(true)
             }
         }
+
+
+        // https://create-react-app.dev/docs/using-the-public-folder/
+        // put audio files and public folder to access dynamically
+        if(event.key == 'ArrowDown'){
+            const audioFile =  (process.env.PUBLIC_URL + '../sounds/' + display + '.mp3').toLowerCase().replace(' ', '_')
+            console.log(audioFile)
+            let audio = new Audio(audioFile)
+            audio.play()
+            
+        }
     };
     
     //Needs work - gets reversed if up arrow and toggle done simultaneously
@@ -81,6 +95,7 @@ const Parent = () => {
 
         }
     }
+
     
 
 
