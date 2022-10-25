@@ -10,11 +10,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:flex-start;
     height: 100%;
     width: 18%;
     min-width: 230px;
-    /* background-color: darkseagreen; */
-    /* background-color: ghostwhite; */
 }
 
 .leftContainer{
@@ -55,7 +54,7 @@
     /* background-color: coral; */
     height: fit-content;
     width: 90%;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .sortButton{
@@ -66,17 +65,42 @@
 
 #arrowButtonContainer{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     /* background-color: orchid; */
     height: 300px;
     width: 90%;
-    margin-top: 20px;
+    margin-top: 50px;
+}
+
+#arrowInner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.arrowRightLeftLabel{
+    margin-top: 174px;
+
+}
+
+.arrowUpDownLabel{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#keyboardGuide{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .arrowsImage{
-    height: 200px;
+    height: 120px;
     width: auto;
 }
 
@@ -181,13 +205,12 @@
   }
 
   .LineStyle{
-    stroke: red;
+    stroke: goldenrod;
     stroke-width: 2px;
   }
 
   h1{
     font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight:500;
   }
 

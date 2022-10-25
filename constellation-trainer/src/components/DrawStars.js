@@ -3,6 +3,7 @@ import React from 'react'
 import cnames from '../data/constellationList_with_abbr.json'
 import DrawLines from './DrawLines'
 import { calculateNewValue } from '@testing-library/user-event/dist/utils'
+import DrawBackgroundStars from './DrawBackgroundStars'
 
 const DrawStars = (props) => {
     
@@ -33,7 +34,7 @@ const DrawStars = (props) => {
         }
     }
 
-    const fixedAspectRatio = React.createElement('div', {className: 'fixedAspectRatio',}, [stars, DrawLines(props)])
+    const fixedAspectRatio = React.createElement('div', {className: 'fixedAspectRatio',}, [stars, DrawLines(props), DrawBackgroundStars(props)])
 
     return fixedAspectRatio
     

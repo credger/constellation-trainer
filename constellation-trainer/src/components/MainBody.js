@@ -6,6 +6,7 @@ import DrawStars from './DrawStars'
 const MainBody = (props) => {
     const x = props.d1
     const j23 = props.lines1 //passing props to DrawStars and DrawLines
+    const j24 = props.background1
  
 
     const showList = 'mainBodyList'
@@ -41,7 +42,7 @@ const MainBody = (props) => {
         <div className = {getMainBodyClass()}>
             <p className = {getMainBodyLabelClass()}>{x}</p>   
             <div className="wrapper">
-                    <DrawStars d1 = {x} lines1 = {j23}/>
+                    <DrawStars d1 = {x} lines1 = {j23} background1 = {j24}/>
             </div>
 
             

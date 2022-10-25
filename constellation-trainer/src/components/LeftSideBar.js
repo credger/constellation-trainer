@@ -24,15 +24,15 @@ const LeftSideBar = (props) => {
 
     return(
         <div id = 'leftSideBar' className = 'leftContainer'>
-            <h1>Constellation Trainer</h1>
             <div id = 'toggleSwitchContainer' className = 'leftContainer'>
+                <h1>Constellation Trainer</h1>      
                 <div className = 'toggleFeature'>
                     <p>Lines</p>
                     <ToggleSwitchDefaultChecked s1 = {props.lines1} s2 = {props.lines2} />
                 </div>
                 <div className = 'toggleFeature'>
                     <p>Background</p>
-                    <ToggleSwitch />
+                    <ToggleSwitch s1 = {props.background1} s2 = {props.background2}/>
                 </div>
                 <div className = 'toggleFeature'>
                     <p>Labels</p>
@@ -48,7 +48,14 @@ const LeftSideBar = (props) => {
                 <button onClick={shuffleList} className = 'sortButton'>Sort Random</button>  
             </div>
             <div id = 'arrowButtonContainer' className = 'leftContainer'>
-                <img src = {arrows} className = 'arrowsImage'></img>
+                <div className = 'arrowRightLeftLabel'>Previous</div>
+                <div id = 'arrowInner'>
+                    <h2 id = 'keyboardGuide'>Keyboard Guide</h2>
+                    <p className = 'arrowUpDownLabel'>Show Label</p>
+                    <img src = {arrows} className = 'arrowsImage'></img>
+                    <p className = 'arrowUpDownLabel'>Audio Label</p>
+                </div>
+                <div className = 'arrowRightLeftLabel'>Next</div>
             </div>
 
         </div>
