@@ -1,4 +1,5 @@
-import coords from '../data/percentBackground.json'
+//import coords from '../data/percentBackground.json'
+import coords from '../data/stereographic_backgroundStars_percent_coords.json'
 import React from 'react'
 import cnames from '../data/constellationList_with_abbr.json'
 

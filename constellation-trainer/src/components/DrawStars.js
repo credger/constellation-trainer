@@ -1,4 +1,5 @@
-import coords from '../data/percent3.json'
+//import coords from '../data/percent3.json'
+import coords from '../data/stereographic_mainStars_percent_coords.json'
 import React from 'react'
 import cnames from '../data/constellationList_with_abbr.json'
 import DrawLines from './DrawLines'
