@@ -1,5 +1,5 @@
 //import coords from '../data/percentBackground.json'
-import coords from '../data/stereographic_backgroundStars_percent_coords.json'
+import backgroundCoords from '../data/stereographic_backgroundStars_percent_coords.json'
 import React from 'react'
 import cnames from '../data/constellationList_with_abbr.json'
 
@@ -25,14 +25,14 @@ const DrawBackgroundStars = (props) => {
 
 
         let backgroundStars = []
-        for(let i = 0; i< coords.length; i++){
-            if(coords[i]['C'] == c){
-                //console.log(coords[i])
-                const starSize = String(Math.abs(parseFloat(coords[i]['V'])+(-6.5))*2)+"px"
-                const starRadius = String(Math.abs(parseFloat(coords[i]['V'])+(-6.5)))+"px"
-                const px = coords[i]['percentX']
-                const py = coords[i]['percentY']
-                backgroundStars.push(React.createElement('div', {className: 'testStar', key: coords[i]['HR'],
+        for(let i = 0; i< backgroundCoords.length; i++){
+            if(backgroundCoords[i]['C'] == c){
+                //console.log(backgroundCoords[i])
+                const starSize = String(Math.abs(parseFloat(backgroundCoords[i]['V'])+(-6.5))*2)+"px"
+                const starRadius = String(Math.abs(parseFloat(backgroundCoords[i]['V'])+(-6.5)))+"px"
+                const px = backgroundCoords[i]['percentX']
+                const py = backgroundCoords[i]['percentY']
+                backgroundStars.push(React.createElement('div', {className: 'testStar', key: backgroundCoords[i]['HR'],
                 style: {right: `calc(${px} - ${starRadius})`, bottom: `calc(${py} - ${starRadius})`,
                 height: starSize, width: starSize, borderRadius: starRadius }}))
             }

@@ -1,4 +1,4 @@
-import clines from '../data/lines.json'
+import clines from '../data/stereographic_lines.json'
 import cnames from '../data/constellationList_with_abbr.json'
 import React from 'react'
 import { calculateNewValue } from '@testing-library/user-event/dist/utils'
