@@ -20,7 +20,6 @@ const LeftSideBar = (props) => {
 
     return(
         <div id = 'leftSideBar' className = 'leftContainer'>
-            <div id = 'leftContentWrapper' className = 'leftContainer'>
                 <div id = 'toggleSwitchContainer' className = 'leftContainer'>
                     <h1>Constellation Trainer</h1>      
                     <div className = 'toggleFeature'>
@@ -54,7 +53,6 @@ const LeftSideBar = (props) => {
                     </div>
                     <div className = 'arrowRightLeftLabel'>Next</div>
                 </div>
-            </div>
         </div>
     )
 }

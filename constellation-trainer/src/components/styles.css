@@ -10,10 +10,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:flex-start;
+    justify-content:start;
     height: 100%;
     width: 18%;
-    min-width: 264px;
+    min-width: 272px;
 }
 
 .leftContainer{
@@ -24,6 +24,7 @@
     height: 100%;
     width: 67%;
     max-height: 100vh;
+    min-height: 800px;
     background-color: #404040;
     background-image: url('../images/cross-stripes.png');
     /* background-color: #00001a; */
@@ -61,7 +62,7 @@
 }
 
 .sortButton{
-    margin: 20px 0px 20px 0px;
+    margin: 10px 0px 0px 0px;
     font-size: 20px;
     border-radius: 8px;
 }
@@ -80,8 +81,8 @@
     justify-content: center;
     /* background-color: orchid; */
     height: 300px;
-    width: 90%;
-    margin-top: 5px;
+    width: 100%;
+    margin-top: 0px;
 }
 
 #arrowInner{
@@ -89,23 +90,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 6px;
-    margin-right: 6px;
 }
 
 .arrowRightLeftLabel{
-    margin-top: 174px;
+    margin-top: 112px;
 
 }
 
 .arrowUpDownLabel{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 #keyboardGuide{
-    margin-bottom: 20px;
-    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 6px;
+    font-size: 24px;
     font-weight: 500;
 }
 
@@ -229,25 +229,16 @@
   }
 
   .eyeOffImage{
-    height: 120px;
+    height: 20px;
     width: auto;
   }
 
   .labelContainer{
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 80px;
     width: 100%;
-  }
-
-  #leftContentWrapper{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: space-between;
-    height: 100%;
-    max-height: 800px;
-    background-color: lightpink;
   }

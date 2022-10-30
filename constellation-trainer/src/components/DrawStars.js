@@ -20,7 +20,6 @@ const DrawStars = (props) => {
 
     // const c = 'Ori'
 
-
     let stars = []
     for(let i = 0; i< coords.length; i++){
         if(coords[i]['C'] == c){
@@ -34,7 +33,7 @@ const DrawStars = (props) => {
             height: starSize, width: starSize, borderRadius: starRadius }}))
         }
     }
-
+    
     const fixedAspectRatio = React.createElement('div', {className: 'fixedAspectRatio',}, [stars, DrawLines(props), DrawBackgroundStars(props)])
 
     return fixedAspectRatio

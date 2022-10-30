@@ -1,12 +1,14 @@
 import './styles.css'
 import React from 'react'
 import DrawStars from './DrawStars'
+import cnames from '../data/constellationList.json'
 
 
 const MainBody = (props) => {
     const x = props.d1
     const j23 = props.lines1 //passing props to DrawStars and DrawLines
     const j24 = props.background1
+        
  
     const showLabel = 'mainBodyShowLabel'
     const hideLabel = 'mainBodyHideLabel'

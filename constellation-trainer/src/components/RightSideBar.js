@@ -10,12 +10,33 @@ const RightSideBar = (props) => {
 
     const x = props.l1 //State of list toggle
     if(x == false){
-        //return null
+        let elements= [];
+        for (let i = 0; i<cnames.length; i++){
+
+            const selected = 'nameListSelected'
+            const notSelected = 'nameList'
+            const getClass = () => {
+                if(props.d1 == cnames[props.o1[i]].Name){
+                    return selected
+                }
+                else{
+                    return notSelected
+                }
+            }
+
+            let rowElements = []
+            rowElements.push(React.createElement('p', {className: 'listNumber', key: 1}, i+1,'.'))
+            rowElements.push(React.createElement('img', {key: 2, src: eyeOff, className: 'eyeOffImage'}, null))
+            elements.push(React.createElement('div', {className: getClass(), key: cnames[i].Name, onClick: () => {props.d2(cnames[props.o1[i]].Name)}}, rowElements))
+        }
+
+        const rightSideBar = React.createElement('div', {id: 'rightSideBar',}, elements)
+
         return(
-            <div id = 'emptyList'>
-                <img src = {eyeOff} className = 'eyeOffImage'></img>
-            </div>
+            rightSideBar
         )
+
+
     }
 
     else{
