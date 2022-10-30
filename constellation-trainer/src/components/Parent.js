@@ -66,12 +66,19 @@ const Parent = () => {
             }
         }
 
+        // if(event.key == 'ArrowUp'){
+        //     console.log('arrowUp')
+        //     if(label == false){
+        //         setLabel(true) 
+        //         setUp(true)
+        //     }
+        // }
+
+
         if(event.key == 'ArrowUp'){
             console.log('arrowUp')
-            if(label == false){
-                setLabel(true) 
-                setUp(true)
-            }
+            setUp(true)
+
         }
 
 
@@ -90,7 +97,7 @@ const Parent = () => {
     const handleKeyUp = event => {
         if(event.key == 'ArrowUp'){
             if(up == true){
-                setLabel(false)
+                // setLabel(false)
                 setUp(false)
             }
 
@@ -103,7 +110,7 @@ const Parent = () => {
     return(
         <div id = 'parent' ref={ref} tabIndex={-1} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}>
             <LeftSideBar o1 = {order} o2 = {setOrder} n1 = {numbers} l1 = {list} l2 = {setList} d2 = {setDisplay}label1 = {label} label2 = {setLabel} lines1 = {lines} lines2 = {setLines} background1 = {background} background2 = {setBackground}/>
-            <MainBody d1 = {display} l1 = {list} label1 = {label} label2 = {setLabel} lines1 = {lines} lines2 = {setLines} background1 = {background} background2 = {setBackground}/>
+            <MainBody d1 = {display} l1 = {list} label1 = {label} label2 = {setLabel} lines1 = {lines} lines2 = {setLines} background1 = {background} background2 = {setBackground} up1 = {up} up2 = {setUp}/>
             <RightSideBar o1 = {order} d1={display} d2 = {setDisplay} o1 = {order} l1 = {list}/>
         </div>
     )

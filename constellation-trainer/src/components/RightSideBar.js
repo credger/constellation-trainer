@@ -1,6 +1,7 @@
 import './styles.css'
 import React from 'react'
 import cnames from '../data/constellationList_with_abbr.json'
+import eyeOff from '../icons/eye-off.svg'
 
 
 
@@ -10,7 +11,11 @@ const RightSideBar = (props) => {
     const x = props.l1 //State of list toggle
     if(x == false){
         //return null
-        return <div id = 'emptyList'></div>
+        return(
+            <div id = 'emptyList'>
+                <img src = {eyeOff} className = 'eyeOffImage'></img>
+            </div>
+        )
     }
 
     else{

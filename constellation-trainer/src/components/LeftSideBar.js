@@ -20,40 +20,41 @@ const LeftSideBar = (props) => {
 
     return(
         <div id = 'leftSideBar' className = 'leftContainer'>
-            <div id = 'toggleSwitchContainer' className = 'leftContainer'>
-                <h1>Constellation Trainer</h1>      
-                <div className = 'toggleFeature'>
-                    <p>Lines</p>
-                    <ToggleSwitchDefaultChecked s1 = {props.lines1} s2 = {props.lines2} />
+            <div id = 'leftContentWrapper' className = 'leftContainer'>
+                <div id = 'toggleSwitchContainer' className = 'leftContainer'>
+                    <h1>Constellation Trainer</h1>      
+                    <div className = 'toggleFeature'>
+                        <p>Lines</p>
+                        <ToggleSwitchDefaultChecked s1 = {props.lines1} s2 = {props.lines2} />
+                    </div>
+                    <div className = 'toggleFeature'>
+                        <p>Background</p>
+                        <ToggleSwitch s1 = {props.background1} s2 = {props.background2}/>
+                    </div>
+                    <div className = 'toggleFeature'>
+                        <p>Labels</p>
+                        <ToggleSwitchDefaultChecked s1 = {props.label1} s2 = {props.label2}/>
+                    </div>
+                    <div className = 'toggleFeature'>
+                        <p>List</p>
+                        <ToggleSwitchDefaultChecked s1 = {props.l1} s2 = {props.l2}  />
+                    </div>
                 </div>
-                <div className = 'toggleFeature'>
-                    <p>Background</p>
-                    <ToggleSwitch s1 = {props.background1} s2 = {props.background2}/>
+                <div id = 'sortButtonContainer' className = 'leftContainer'>
+                    <button onClick={alphabetizeList} className = 'sortButton'>Sort Alphabetical</button>
+                    <button onClick={shuffleList} className = 'sortButton'>Sort Random</button>  
                 </div>
-                <div className = 'toggleFeature'>
-                    <p>Labels</p>
-                    <ToggleSwitchDefaultChecked s1 = {props.label1} s2 = {props.label2}/>
-                </div>
-                <div className = 'toggleFeature'>
-                    <p>List</p>
-                    <ToggleSwitchDefaultChecked s1 = {props.l1} s2 = {props.l2}  />
+                <div id = 'arrowButtonContainer' className = 'leftContainer'>
+                    <div className = 'arrowRightLeftLabel'>Previous</div>
+                    <div id = 'arrowInner'>
+                        <h2 id = 'keyboardGuide'>Keyboard Guide</h2>
+                        <p className = 'arrowUpDownLabel'>Show Label</p>
+                        <img src = {arrows} className = 'arrowsImage'></img>
+                        <p className = 'arrowUpDownLabel'>Audio Label</p>
+                    </div>
+                    <div className = 'arrowRightLeftLabel'>Next</div>
                 </div>
             </div>
-            <div id = 'sortButtonContainer' className = 'leftContainer'>
-                <button onClick={alphabetizeList} className = 'sortButton'>Sort Alphabetical</button>
-                <button onClick={shuffleList} className = 'sortButton'>Sort Random</button>  
-            </div>
-            <div id = 'arrowButtonContainer' className = 'leftContainer'>
-                <div className = 'arrowRightLeftLabel'>Previous</div>
-                <div id = 'arrowInner'>
-                    <h2 id = 'keyboardGuide'>Keyboard Guide</h2>
-                    <p className = 'arrowUpDownLabel'>Show Label</p>
-                    <img src = {arrows} className = 'arrowsImage'></img>
-                    <p className = 'arrowUpDownLabel'>Audio Label</p>
-                </div>
-                <div className = 'arrowRightLeftLabel'>Next</div>
-            </div>
-
         </div>
     )
 }

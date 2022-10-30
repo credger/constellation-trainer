@@ -13,19 +13,20 @@
     justify-content:flex-start;
     height: 100%;
     width: 18%;
-    min-width: 230px;
+    min-width: 264px;
 }
 
 .leftContainer{
     background-color: lightgray;
 }
 
-.mainBodyList{
+.mainBody{
     height: 100%;
     width: 67%;
     max-height: 100vh;
     background-color: #404040;
     background-image: url('../images/cross-stripes.png');
+    /* background-color: #00001a; */
 }
 
 
@@ -34,7 +35,7 @@
     /* width: 82%; */
     width: 67%;
     max-height: 100vh;
-    background-color: #00001a
+    background-color: #00001a;
 }
 
 #toggleSwitchContainer{
@@ -45,7 +46,7 @@
     height: 300px;
     width: 90%;
     /* background-color: burlywood; */
-    margin-top: 25px;
+    margin-top: 5px;
 }
 
 #sortButtonContainer{
@@ -56,7 +57,7 @@
     /* background-color: coral; */
     height: fit-content;
     width: 90%;
-    margin-top: 60px;
+    margin-top: 5px;
 }
 
 .sortButton{
@@ -64,6 +65,13 @@
     font-size: 20px;
     border-radius: 8px;
 }
+
+.sortButton:active{
+    scale: 0.9;
+}
+
+
+
 
 #arrowButtonContainer{
     display: flex;
@@ -73,7 +81,7 @@
     /* background-color: orchid; */
     height: 300px;
     width: 90%;
-    margin-top: 50px;
+    margin-top: 5px;
 }
 
 #arrowInner{
@@ -102,7 +110,7 @@
 }
 
 .arrowsImage{
-    height: 120px;
+    height: 110px;
     width: auto;
 }
 
@@ -154,30 +162,24 @@
 
 .mainBodyShowLabel{
     color: white;
-    font-size: 36px;
-    margin-top: 20px;
+    font-size: 34px;
+    /* margin-top: 20px; */
+}
+
+.upLabel{
+    color: white;
+    font-size: 40px;
+    /* margin-top: 20px; */
 }
 
 .mainBodyHideLabel{
-    color: #00001a;
-    font-size: 36px;
-    margin-top: 20px;
+    display: none;
 }
 
 .testStar{
     position: absolute;
     background-color: white;
 }
-
-
-/* #one{
-    position: absolute;
-    right: 17.5%;
-    bottom: 62.72%;
-    background-color: yellow;
-} */
-
-
 
 .wrapper {
     width: 100%;
@@ -217,7 +219,35 @@
   }
 
   #emptyList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height:100%;
     width: 15%;
     background-color: lightgray;
+  }
+
+  .eyeOffImage{
+    height: 120px;
+    width: auto;
+  }
+
+  .labelContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+  }
+
+  #leftContentWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 800px;
+    background-color: lightpink;
   }

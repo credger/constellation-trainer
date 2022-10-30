@@ -8,27 +8,19 @@ const MainBody = (props) => {
     const j23 = props.lines1 //passing props to DrawStars and DrawLines
     const j24 = props.background1
  
-
-    const showList = 'mainBodyList'
-    const hideList = 'mainBodyNoList'
-    const getMainBodyClass = () => {
-        const y = props.l1
-        if(y == false){
-            return hideList
-        }
-        else{
-            return showList
-        }
-    }
-
     const showLabel = 'mainBodyShowLabel'
     const hideLabel = 'mainBodyHideLabel'
+    const upLabel = 'upLabel'
     const getMainBodyLabelClass = () => {
 
         const z = props.label1
+        const u = props.up1
         //console.log(z)
-        if(z == false){
+        if(z == false && u == false){
             return hideLabel
+        }
+        else if(u == true){
+            return upLabel
         }
         else{
             return showLabel
@@ -39,13 +31,13 @@ const MainBody = (props) => {
 
 
     return(
-        <div className = {getMainBodyClass()}>
-            <p className = {getMainBodyLabelClass()}>{x}</p>   
+        <div className = 'mainBody'>
+            <div className = 'labelContainer'>
+                <p className = {getMainBodyLabelClass()}>{x}</p>
+            </div>   
             <div className="wrapper">
                     <DrawStars d1 = {x} lines1 = {j23} background1 = {j24}/>
-            </div>
-
-            
+            </div>            
         </div>
     )
 }
