@@ -28,13 +28,13 @@ const DrawStars = (props) => {
             const starRadius = String(Math.abs(parseFloat(coords[i]['V'])+(-6.5)))+"px"
             const px = coords[i]['percentX']
             const py = coords[i]['percentY']
-            stars.push(React.createElement('div', {className: 'testStar', key: coords[i]['HR'],
+            stars.push(React.createElement('div', {className: 'testStar', key: 'mainStar' + String(coords[i]['HR']),
             style: {right: `calc(${px} - ${starRadius})`, bottom: `calc(${py} - ${starRadius})`,
             height: starSize, width: starSize, borderRadius: starRadius }}))
         }
     }
     
-    const fixedAspectRatio = React.createElement('div', {className: 'fixedAspectRatio',}, [stars, DrawLines(props), DrawBackgroundStars(props)])
+    const fixedAspectRatio = React.createElement('div', {className: 'fixedAspectRatio'}, [stars, DrawLines(props), DrawBackgroundStars(props)])
 
     return fixedAspectRatio
     

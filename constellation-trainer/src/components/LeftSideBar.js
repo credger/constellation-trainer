@@ -20,8 +20,9 @@ const LeftSideBar = (props) => {
 
     return(
         <div id = 'leftSideBar' className = 'leftContainer'>
-                <div id = 'toggleSwitchContainer' className = 'leftContainer'>
-                    <h1>Constellation Trainer</h1>      
+            <div id = 'leftSideBarFlexContainer'>
+                <h1>Constellation Trainer</h1> 
+                <div id = 'toggleSwitchContainer' className = 'leftContainer'>     
                     <div className = 'toggleFeature'>
                         <p>Lines</p>
                         <ToggleSwitchDefaultChecked s1 = {props.lines1} s2 = {props.lines2} />
@@ -53,6 +54,7 @@ const LeftSideBar = (props) => {
                     </div>
                     <div className = 'arrowRightLeftLabel'>Next</div>
                 </div>
+            </div>
         </div>
     )
 }

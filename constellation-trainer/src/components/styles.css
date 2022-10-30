@@ -13,7 +13,8 @@
     justify-content:start;
     height: 100%;
     width: 18%;
-    min-width: 272px;
+    min-width: 280px;
+    min-height: 680px;
 }
 
 .leftContainer{
@@ -24,7 +25,7 @@
     height: 100%;
     width: 67%;
     max-height: 100vh;
-    min-height: 800px;
+    min-height: 680px;
     background-color: #404040;
     background-image: url('../images/cross-stripes.png');
     /* background-color: #00001a; */
@@ -44,7 +45,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 300px;
+    height: fit-content;
     width: 90%;
     /* background-color: burlywood; */
     margin-top: 5px;
@@ -53,16 +54,15 @@
 #sortButtonContainer{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     /* background-color: coral; */
-    height: fit-content;
+    height: 80px;
     width: 90%;
-    margin-top: 5px;
+    margin: 20px 0px 20px 0px;
 }
 
 .sortButton{
-    margin: 10px 0px 0px 0px;
     font-size: 20px;
     border-radius: 8px;
 }
@@ -71,18 +71,14 @@
     scale: 0.9;
 }
 
-
-
-
 #arrowButtonContainer{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     /* background-color: orchid; */
-    height: 300px;
+    height: fit-content;
     width: 100%;
-    margin-top: 0px;
 }
 
 #arrowInner{
@@ -93,7 +89,7 @@
 }
 
 .arrowRightLeftLabel{
-    margin-top: 112px;
+    margin-top: 92px;
 
 }
 
@@ -157,6 +153,7 @@
     width: 15%;
     overflow-y: auto;
     background-color: lightskyblue;
+    min-height: 680px;
 }
 
 
@@ -241,4 +238,14 @@
     justify-content: center;
     height: 80px;
     width: 100%;
+  }
+
+  #leftSideBarFlexContainer{
+    height: 100%;
+    max-height: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }

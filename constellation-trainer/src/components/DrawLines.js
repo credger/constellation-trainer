@@ -20,14 +20,6 @@ const DrawLines = (props) => {
             }
         }
 
-        console.log(clines[c2][0][1][1])
-        console.log(clines[c2].length)
-       
-        // let lines = []
-        // for(let i = 0; i<clines[c2].length; i++){
-        //     lines.push(React.createElement('line', {x1=clines[c2][i][0][0], y1=clines[c2][i][0][1], x2=clines[c2][i][1][0], y2=clines[c2][i][1][1] })
-        // }
-
         let lines = []
         for(let i = 0; i<clines[c2].length; i++){
             const x1 = clines[c2][i][0][0]
@@ -35,11 +27,11 @@ const DrawLines = (props) => {
             const x2 = clines[c2][i][1][0]
             const y2 = clines[c2][i][1][1]
 
-        lines.push(React.createElement('line', {x1: `calc(100% - ${x1})`, y1: `calc(100% - ${y1})`, x2: `calc(100% - ${x2})`, y2:`calc(100% - ${y2})`, className: 'LineStyle'}))
+        lines.push(React.createElement('line', {key: 'Lines' + String(clines[c2][i]), x1: `calc(100% - ${x1})`, y1: `calc(100% - ${y1})`, x2: `calc(100% - ${x2})`, y2:`calc(100% - ${y2})`, className: 'LineStyle'}))
 
 
         }
-        const testSvg = React.createElement('svg', {height: '100%', width: '100%'}, lines)
+        const testSvg = React.createElement('svg', {height: '100%', width: '100%', key: 'svgLines' }, lines)
 
         //need to subract from 100 for line xy coords
         //lines draw to top right corner of star; need to discover fix

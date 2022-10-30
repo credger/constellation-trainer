@@ -32,7 +32,7 @@ const DrawBackgroundStars = (props) => {
                 const starRadius = String(Math.abs(parseFloat(backgroundCoords[i]['V'])+(-6.5)))+"px"
                 const px = backgroundCoords[i]['percentX']
                 const py = backgroundCoords[i]['percentY']
-                backgroundStars.push(React.createElement('div', {className: 'testStar', key: backgroundCoords[i]['HR'],
+                backgroundStars.push(React.createElement('div', {className: 'testStar', key: 'background' + String(backgroundCoords[i]['HR']),
                 style: {right: `calc(${px} - ${starRadius})`, bottom: `calc(${py} - ${starRadius})`,
                 height: starSize, width: starSize, borderRadius: starRadius }}))
             }
