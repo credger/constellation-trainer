@@ -3,19 +3,17 @@ import ToggleSwitch from './ToggleSwitch'
 import arrows from '../images/arrows.png'
 import shuffle from './fisherYatesShuffle.js'
 import ToggleSwitchDefaultChecked from './ToggleSwitchDefaultChecked'
-import cnames from '../data/constellationList.json'
-import { useEffect } from 'react'
 
 const LeftSideBar = (props) => {
 
     const alphabetizeList = () => {
-        const x = Object.create(props.n1) //Object.create avoids reference
-        props.o2(x)
+        const x = Object.create(props.numberState) //Object.create avoids reference
+        props.orderSetState(x)
     }
 
     const shuffleList = () => {
-        const y = Object.create(props.o1) 
-        props.o2(shuffle(y))
+        const y = Object.create(props.orderState) 
+        props.orderSetState(shuffle(y))
     }
 
     return(
@@ -25,19 +23,19 @@ const LeftSideBar = (props) => {
                 <div id = 'toggleSwitchContainer' className = 'leftContainer'>     
                     <div className = 'toggleFeature'>
                         <p>Lines</p>
-                        <ToggleSwitchDefaultChecked s1 = {props.lines1} s2 = {props.lines2} />
+                        <ToggleSwitchDefaultChecked state = {props.linesState} setState = {props.linesSetState} />
                     </div>
                     <div className = 'toggleFeature'>
                         <p>Background</p>
-                        <ToggleSwitch s1 = {props.background1} s2 = {props.background2}/>
+                        <ToggleSwitch state = {props.backgroundState} setState = {props.backgroundSetState}/>
                     </div>
                     <div className = 'toggleFeature'>
                         <p>Labels</p>
-                        <ToggleSwitchDefaultChecked s1 = {props.label1} s2 = {props.label2}/>
+                        <ToggleSwitchDefaultChecked state = {props.labelState} setState = {props.labelSetState}/>
                     </div>
                     <div className = 'toggleFeature'>
                         <p>List</p>
-                        <ToggleSwitchDefaultChecked s1 = {props.l1} s2 = {props.l2}  />
+                        <ToggleSwitchDefaultChecked state = {props.listState} setState = {props.listSetState}  />
                     </div>
                 </div>
                 <div id = 'sortButtonContainer' className = 'leftContainer'>
@@ -54,6 +52,7 @@ const LeftSideBar = (props) => {
                     </div>
                     <div className = 'arrowRightLeftLabel'>Next</div>
                 </div>
+                <p className = 'leftSidebarNotes'>Note - constellation lines will not display in Firefox.  Use Google Chrome for best experience. </p>
             </div>
         </div>
     )

@@ -1,44 +1,32 @@
 import './styles.css'
 import React from 'react'
 import DrawStars from './DrawStars'
-import cnames from '../data/constellationList.json'
 
 
 const MainBody = (props) => {
-    const x = props.d1
-    const j23 = props.lines1 //passing props to DrawStars and DrawLines
-    const j24 = props.background1
-        
- 
-    const showLabel = 'mainBodyShowLabel'
-    const hideLabel = 'mainBodyHideLabel'
-    const upLabel = 'upLabel'
+    
     const getMainBodyLabelClass = () => {
 
-        const z = props.label1
-        const u = props.up1
-        //console.log(z)
+        const z = props.labelState
+        const u = props.upState
         if(z == false && u == false){
-            return hideLabel
+            return 'mainBodyHideLabel'
         }
         else if(u == true){
-            return upLabel
+            return 'upLabel'
         }
         else{
-            return showLabel
+            return 'mainBodyShowLabel'
         }
     }
-
-
-
 
     return(
         <div className = 'mainBody'>
             <div className = 'labelContainer'>
-                <p className = {getMainBodyLabelClass()}>{x}</p>
+                <p className = {getMainBodyLabelClass()}>{props.displayState}</p>
             </div>   
             <div className="wrapper">
-                    <DrawStars d1 = {x} lines1 = {j23} background1 = {j24}/>
+                    <DrawStars displayState = {props.displayState} linesState = {props.linesState} backgroundState = {props.backgroundState}/>
             </div>            
         </div>
     )
@@ -47,13 +35,3 @@ const MainBody = (props) => {
 export default MainBody
 
 
-
-
-
-{/* <div className="wrapper">
-<div className="fixedAspectRatio">
-    This is your div with the specified aspect ratio.
-    <div className = 'testStar' id = 'center'></div>
-    <DrawStars />
-</div>
-</div> */}

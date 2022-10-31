@@ -8,7 +8,7 @@ import eyeOff from '../icons/eye-off.svg'
 
 const RightSideBar = (props) => {
 
-    const x = props.l1 //State of list toggle
+    const x = props.listState //State of list toggle
     if(x == false){
         let elements= [];
         for (let i = 0; i<cnames.length; i++){
@@ -16,7 +16,7 @@ const RightSideBar = (props) => {
             const selected = 'nameListSelected'
             const notSelected = 'nameList'
             const getClass = () => {
-                if(props.d1 == cnames[props.o1[i]].Name){
+                if(props.displayState == cnames[props.orderState[i]].Name){
                     return selected
                 }
                 else{
@@ -27,7 +27,7 @@ const RightSideBar = (props) => {
             let rowElements = []
             rowElements.push(React.createElement('p', {className: 'listNumber', key: 1}, i+1,'.'))
             rowElements.push(React.createElement('img', {key: 2, src: eyeOff, className: 'eyeOffImage'}, null))
-            elements.push(React.createElement('div', {className: getClass(), key: cnames[i].Name, onClick: () => {props.d2(cnames[props.o1[i]].Name)}}, rowElements))
+            elements.push(React.createElement('div', {className: getClass(), key: cnames[i].Name, onClick: () => {props.displaySetState(cnames[props.orderState[i]].Name)}}, rowElements))
         }
 
         const rightSideBar = React.createElement('div', {id: 'rightSideBar',}, elements)
@@ -46,7 +46,7 @@ const RightSideBar = (props) => {
             const selected = 'nameListSelected'
             const notSelected = 'nameList'
             const getClass = () => {
-                if(props.d1 == cnames[props.o1[i]].Name){
+                if(props.displayState == cnames[props.orderState[i]].Name){
                     return selected
                 }
                 else{
@@ -56,8 +56,8 @@ const RightSideBar = (props) => {
 
             let rowElements = []
             rowElements.push(React.createElement('p', {className: 'listNumber', key: 1}, i+1,'.'))
-            rowElements.push(React.createElement('p', {key: 2}, cnames[props.o1[i]].Name))
-            elements.push(React.createElement('div', {className: getClass(), key: cnames[i].Name, onClick: () => {props.d2(cnames[props.o1[i]].Name)}}, rowElements))
+            rowElements.push(React.createElement('p', {key: 2}, cnames[props.orderState[i]].Name))
+            elements.push(React.createElement('div', {className: getClass(), key: cnames[i].Name, onClick: () => {props.displaySetState(cnames[props.orderState[i]].Name)}}, rowElements))
         }
 
         const rightSideBar = React.createElement('div', {id: 'rightSideBar',}, elements)
@@ -70,5 +70,3 @@ const RightSideBar = (props) => {
 
 export default RightSideBar
 
-
-//elements.push(React.createElement('div', {className: 'nameList', key: cnames[i].Name, onClick: () => {props.d2(cnames[props.o1[i]].Name)}}, rowElements))

@@ -1,7 +1,6 @@
 import LeftSideBar from './LeftSideBar'
 import MainBody from './MainBody'
 import RightSideBar from './RightSideBar'
-import shuffle from './fisherYatesShuffle.js'
 import {useState} from 'react'
 import './styles.css'
 import cnames from '../data/constellationList.json'
@@ -11,39 +10,27 @@ import {useRef} from 'react'
 
 
 
-
-
-
-
-
 const Parent = () => {
 
     const numbers = [...Array(30).keys()]         //Array 0:29
     const [order, setOrder] = useState(numbers)   //Initial State 0:29
-    
-    const firstName = cnames[order[0]].Name       //First Name = currentState[0]
-    const [display, setDisplay] = useState(firstName)
-
+    const [display, setDisplay] = useState(cnames[order[0]].Name)
     const[list, setList] = useState(true)
     const[label, setLabel] = useState(true)
-    const[up, setUp] = useState(false) //Used to set behavior of upArrow keyDown and keyUp
+    const[up, setUp] = useState(false)  //Used to set behavior of upArrow keyDown and keyUp
     const[lines, setLines] = useState(true)
     const[background,setBackground] = useState(false)
 
-
-
-    useEffect(() => {
-        setDisplay(cnames[order[0]].Name)  //Reset display after sort
+    useEffect(() => {      //Reset display after a sort button is clicked
+        setDisplay(cnames[order[0]].Name) 
     },[order])
 
-    //Focus on parent div on page load
-    const ref = useRef(null);  
+    const ref = useRef(null);  //Set focus to parent div on page load
     useEffect(() => {
         ref.current.focus();
     }, []);
 
-    //Try to make this a seperate function
-    const handleKeyDown = event => {
+    const handleKeyDown = event => {    //KeyDown event logic for arrow keys
         if(event.key == 'ArrowRight'){
             for(let i=0; i<cnames.length; i++){
                 if(cnames[order[i]].Name == display){
@@ -66,14 +53,6 @@ const Parent = () => {
             }
         }
 
-        // if(event.key == 'ArrowUp'){
-        //     console.log('arrowUp')
-        //     if(label == false){
-        //         setLabel(true) 
-        //         setUp(true)
-        //     }
-        // }
-
 
         if(event.key == 'ArrowUp'){
             console.log('arrowUp')
@@ -93,25 +72,23 @@ const Parent = () => {
         }
     };
     
-    //Needs work - gets reversed if up arrow and toggle done simultaneously
-    const handleKeyUp = event => {
+    const handleKeyUp = event => {      //KeyUp event logic for arrow keys
         if(event.key == 'ArrowUp'){
             if(up == true){
-                // setLabel(false)
                 setUp(false)
             }
 
         }
     }
 
-    
-
-
     return(
         <div id = 'parent' ref={ref} tabIndex={-1} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}>
-            <LeftSideBar o1 = {order} o2 = {setOrder} n1 = {numbers} l1 = {list} l2 = {setList} d2 = {setDisplay}label1 = {label} label2 = {setLabel} lines1 = {lines} lines2 = {setLines} background1 = {background} background2 = {setBackground}/>
-            <MainBody d1 = {display} l1 = {list} label1 = {label} label2 = {setLabel} lines1 = {lines} lines2 = {setLines} background1 = {background} background2 = {setBackground} up1 = {up} up2 = {setUp} o1 = {order}/>
-            <RightSideBar o1 = {order} d1={display} d2 = {setDisplay} o1 = {order} l1 = {list}/>
+            <LeftSideBar orderState = {order} orderSetState = {setOrder} numberState = {numbers} listState = {list} listSetState = {setList} displaySetState = {setDisplay}
+                labelState = {label} labelSetState = {setLabel} linesState = {lines} linesSetState = {setLines} backgroundState = {background}
+                backgroundSetState = {setBackground}/>
+            <MainBody displayState = {display} listState = {list} labelState = {label} labelSetState = {setLabel} linesState = {lines} linesSetState = {setLines}
+                backgroundState = {background} backgroundSetState = {setBackground} upState = {up} upSetState = {setUp} orderState = {order}/>
+            <RightSideBar orderState = {order} displayState={display} displaySetState= {setDisplay} listState = {list}/>
         </div>
     )
 

@@ -1,12 +1,10 @@
 import clines from '../data/stereographic_lines.json'
 import cnames from '../data/constellationList_with_abbr.json'
 import React from 'react'
-import { calculateNewValue } from '@testing-library/user-event/dist/utils'
 
 const DrawLines = (props) => {
     
-
-    if(props.lines1 == false){
+    if(props.linesState == false){
         return null
     }
 
@@ -14,7 +12,7 @@ const DrawLines = (props) => {
        
         let c2 = null
         for(let i=0; i<cnames.length; i++){
-            if (cnames[i]['Name'] == props.d1){
+            if (cnames[i]['Name'] == props.displayState){
                 c2 = cnames[i]['Abbr']
                 break
             }
@@ -27,16 +25,14 @@ const DrawLines = (props) => {
             const x2 = clines[c2][i][1][0]
             const y2 = clines[c2][i][1][1]
 
-        lines.push(React.createElement('line', {key: 'Lines' + String(clines[c2][i]), x1: `calc(100% - ${x1})`, y1: `calc(100% - ${y1})`, x2: `calc(100% - ${x2})`, y2:`calc(100% - ${y2})`, className: 'LineStyle'}))
-
-
+        lines.push(React.createElement('line', {key: 'Lines' + String(clines[c2][i]), x1: `calc(100% - ${x1})`,
+            y1: `calc(100% - ${y1})`, x2: `calc(100% - ${x2})`, y2:`calc(100% - ${y2})`, className: 'lineStyle'}))
         }
-        const testSvg = React.createElement('svg', {height: '100%', width: '100%', key: 'svgLines' }, lines)
+        
+        const linesSvg = React.createElement('svg', {height: '100%', width: '100%', key: 'linesSvg' }, lines)
 
-        //need to subract from 100 for line xy coords
-        //lines draw to top right corner of star; need to discover fix
         return(
-            testSvg
+            linesSvg
         )
     }
 
@@ -44,4 +40,3 @@ const DrawLines = (props) => {
 
 export default DrawLines
 
-//style: {stroke:'red', strokeWidth:1}

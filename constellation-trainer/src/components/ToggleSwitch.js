@@ -5,7 +5,7 @@ const ToggleSwitch = (props) => {
     return(
         <div>
             <label className = {styles.toggleBox}>
-                <input onChange = {() => props.s2(!props.s1)} type = 'checkbox' className = {styles.checkbox}></input>
+                <input onChange = {() => props.setState(!props.state)} type = 'checkbox' className = {styles.checkbox}></input>
                 <div className = {styles.toggleSlider}></div>
             </label>
         </div>
