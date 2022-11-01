@@ -26,9 +26,9 @@ const DrawLines = (props) => {
             const y2 = clines[c2][i][1][1]
 
         lines.push(React.createElement('line', {key: 'Lines' + String(clines[c2][i]), x1: `calc(100% - ${x1})`,
-            y1: `calc(100% - ${y1})`, x2: `calc(100% - ${x2})`, y2:`calc(100% - ${y2})`, className: 'lineStyle'}))
+            y1: `calc(100% - ${y1})`, x2: `calc(100% - ${x2})`, y2:`calc(100% - ${y2})`, className: 'lineStyle'}))  //Calc() requires space before and after operator
         }
-        
+
         const linesSvg = React.createElement('svg', {height: '100%', width: '100%', key: 'linesSvg' }, lines)
 
         return(
