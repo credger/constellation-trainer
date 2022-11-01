@@ -8,10 +8,38 @@ import React from 'react';
 import {useEffect} from 'react'
 import {useRef} from 'react'
 
-
+import andromedaAudio from '../sounds/andromeda.mp3'
+import aquariusAudio from '../sounds/aquarius.mp3'
+import aquillaAudio from '../sounds/aquilla.mp3'
+import bootesAudio from '../sounds/bootes.mp3'
+import cancerAudio from '../sounds/cancer.mp3'
+import canisMajorAudio from '../sounds/canis_major.mp3'
+import capricornusAudio from '../sounds/capricornus.mp3'
+import cassiopeiaAudio from '../sounds/cassiopeia.mp3'
+import cepheusAudio from '../sounds/cepheus.mp3'
+import cetusAudio from '../sounds/cetus.mp3'
+import craterAudio from '../sounds/crater.mp3'
+import cygnusAudio from '../sounds/cygnus.mp3'
+import dracoAudio from '../sounds/draco.mp3'
+import eridanusAudio from '../sounds/eridanus.mp3'
+import geminiAudio from '../sounds/gemini.mp3'
+import herculesAudio from '../sounds/hercules.mp3'
+import hydraAudio from '../sounds/hydra.mp3'
+import leoAudio from '../sounds/leo.mp3'
+import lyraAudio from '../sounds/lyra.mp3'
+import ophiuchusAudio from '../sounds/ophiuchus.mp3'
+import orionAudio from '../sounds/orion.mp3'
+import pegasusAudio from '../sounds/pegasus.mp3'
+import perseusAudio from '../sounds/perseus.mp3'
+import piscesAudio from '../sounds/pisces.mp3'
+import sagittariusAudio from '../sounds/sagittarius.mp3'
+import scorpiusAudio from '../sounds/scorpius.mp3'
+import taurusAudio from '../sounds/taurus.mp3'
+import ursaMajorAudio from '../sounds/ursa_major.mp3'
+import ursaMinorAudio from '../sounds/ursa_minor.mp3'
+import virgoAudio from '../sounds/virgo.mp3'
 
 const Parent = () => {
-
     const numbers = [...Array(30).keys()]         //Array 0:29
     const [order, setOrder] = useState(numbers)   //Initial State 0:29
     const [display, setDisplay] = useState(cnames[order[0]].Name)
@@ -20,6 +48,13 @@ const Parent = () => {
     const[up, setUp] = useState(false)  //Used to set behavior of upArrow keyDown and keyUp
     const[lines, setLines] = useState(true)
     const[background,setBackground] = useState(false)
+
+    const audioFiles = [andromedaAudio, aquariusAudio, aquillaAudio, bootesAudio, cancerAudio, canisMajorAudio,  //audio files - must be same order as cnames
+                        capricornusAudio, cassiopeiaAudio, cepheusAudio, cetusAudio, craterAudio, cygnusAudio,
+                        dracoAudio, eridanusAudio, geminiAudio, herculesAudio, hydraAudio, leoAudio, lyraAudio,
+                        ophiuchusAudio, orionAudio, pegasusAudio, perseusAudio, piscesAudio, sagittariusAudio,
+                        scorpiusAudio, taurusAudio, ursaMajorAudio, ursaMinorAudio, virgoAudio]  
+
 
     useEffect(() => {      //Reset display after a sort button is clicked
         setDisplay(cnames[order[0]].Name) 
@@ -53,22 +88,19 @@ const Parent = () => {
             }
         }
 
-
         if(event.key == 'ArrowUp'){
             console.log('arrowUp')
             setUp(true)
 
         }
 
-
-        // https://create-react-app.dev/docs/using-the-public-folder/
-        // put audio files and public folder to access dynamically
         if(event.key == 'ArrowDown'){
-            const audioFile =  (process.env.PUBLIC_URL + '../sounds/' + display + '.mp3').toLowerCase().replace(' ', '_')
-            console.log(audioFile)
-            let audio = new Audio(audioFile)
-            audio.play()
-            
+            for(let i=0; i<cnames.length; i++){
+                if(cnames[order[i]].Name == display){
+                    let audio = new Audio(audioFiles[order[i]])
+                    audio.play()   
+                }
+            }
         }
     };
     
