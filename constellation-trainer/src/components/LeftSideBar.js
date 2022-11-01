@@ -52,7 +52,7 @@ const LeftSideBar = (props) => {
                     </div>
                     <div className = 'arrowRightLeftLabel'>Next</div>
                 </div>
-                <p className = 'leftSidebarNotes'>Note - constellation lines will not display in Firefox.  Use Google Chrome for best experience. </p>
+                <p className = 'leftSidebarNotes'>Note - constellation lines will not display in Firefox or Safari.  Use Google Chrome for best experience. </p>
             </div>
         </div>
     )
