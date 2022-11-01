@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/constellation-trainer/static/css/main.97b3a6e4.css",
+    "main.js": "/constellation-trainer/static/js/main.7227f505.js",
+    "static/js/787.5f3ae5f6.chunk.js": "/constellation-trainer/static/js/787.5f3ae5f6.chunk.js",
+    "static/media/arrows.png": "/constellation-trainer/static/media/arrows.603fdba26fe82d09c5d8.png",
+    "index.html": "/constellation-trainer/index.html",
+    "static/media/eye-off.svg": "/constellation-trainer/static/media/eye-off.4389b7535cf53010863b254ef06baf19.svg",
+    "main.97b3a6e4.css.map": "/constellation-trainer/static/css/main.97b3a6e4.css.map",
+    "main.7227f505.js.map": "/constellation-trainer/static/js/main.7227f505.js.map",
+    "787.5f3ae5f6.chunk.js.map": "/constellation-trainer/static/js/787.5f3ae5f6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97b3a6e4.css",
+    "static/js/main.7227f505.js"
+  ]
+}
