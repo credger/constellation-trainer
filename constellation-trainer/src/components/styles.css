@@ -29,7 +29,7 @@
     min-width: 500px;
     background-color: #404040;
     background-image: url('../images/cross-stripes.png');
-    /* background-color: #00001a; */
+    overflow: hidden;
 }
 
 
@@ -199,12 +199,8 @@
     bottom: 0;
     right: 0;
     left: 0;
-    /* fill parent */
     background-color: #00001a;
-    /* let's see it! */
     color: white;
-    /* transform: rotate(180deg); */
-
   }
 
   .lineStyle{

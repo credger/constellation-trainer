@@ -23,7 +23,7 @@ const DrawBackgroundStars = (props) => {
         let backgroundStars = []
         for(let i = 0; i< backgroundCoords.length; i++){
             if(backgroundCoords[i]['C'] == c){
-                const starSize = String(Math.abs(parseFloat(backgroundCoords[i]['V'])+(-6.5))*2)+"px"
+                const starSize = String(Math.abs(parseFloat(backgroundCoords[i]['V'])+(-6.5))*2)+"px"  //Convert star visual magnitude to pixel dimension
                 const starRadius = String(Math.abs(parseFloat(backgroundCoords[i]['V'])+(-6.5)))+"px"
                 const px = backgroundCoords[i]['percentX']
                 const py = backgroundCoords[i]['percentY']
