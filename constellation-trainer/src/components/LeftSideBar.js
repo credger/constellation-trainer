@@ -7,13 +7,13 @@ import ToggleSwitchDefaultChecked from './ToggleSwitchDefaultChecked'
 const LeftSideBar = (props) => {
 
     const alphabetizeList = () => {                 //Alphetizes contellations list on 'rightSideBar' div
-        const x = Object.create(props.numberState)  //Object.create avoids reference
-        props.orderSetState(x)
+        const numberArray = Object.create(props.numberState)  //Object.create avoids reference
+        props.orderSetState(numberArray)
     }
 
     const shuffleList = () => {                     //Randomly shuffles constellation list on 'rightSideBar' div
-        const y = Object.create(props.orderState) 
-        props.orderSetState(shuffle(y))
+        const numberArray = Object.create(props.orderState)   //Object.create avoids reference
+        props.orderSetState(shuffle(numberArray))
     }
 
     return(
