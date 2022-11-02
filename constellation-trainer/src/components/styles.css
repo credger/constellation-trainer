@@ -14,7 +14,7 @@
     height: 100%;
     width: 18%;
     min-width: 280px;
-    min-height: 700px;
+    min-height: 720px;
 }
 
 .leftContainer{
@@ -25,7 +25,7 @@
     height: 100%;
     width: 67%;
     max-height: 100vh;
-    min-height: 700px;
+    min-height: 720px;
     min-width: 500px;
     background-color: #404040;
     background-image: url('../images/cross-stripes.png');
@@ -35,7 +35,6 @@
 
 .mainBodyNoList{
     height: 100%;
-    /* width: 82%; */
     width: 67%;
     max-height: 100vh;
     background-color: #00001a;
@@ -154,7 +153,7 @@
     width: 15%;
     overflow-y: auto;
     background-color: lightskyblue;
-    min-height: 700px;
+    min-height: 720px;
     min-width: 175px;
 }
 
@@ -162,7 +161,6 @@
 .mainBodyShowLabel{
     color: white;
     font-size: 34px;
-    /* margin-top: 20px; */
 }
 
 .upLabel{
@@ -184,6 +182,7 @@
     display: inline-block;
     position: relative;
 }
+
 .wrapper:after {
 padding-top: 62.5%;  /* 8:5 ratio */
 display: block;
