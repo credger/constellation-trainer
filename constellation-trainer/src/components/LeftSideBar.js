@@ -6,12 +6,12 @@ import ToggleSwitchDefaultChecked from './ToggleSwitchDefaultChecked'
 
 const LeftSideBar = (props) => {
 
-    const alphabetizeList = () => {
-        const x = Object.create(props.numberState) //Object.create avoids reference
+    const alphabetizeList = () => {                 //Alphetizes contellations list on 'rightSideBar' div
+        const x = Object.create(props.numberState)  //Object.create avoids reference
         props.orderSetState(x)
     }
 
-    const shuffleList = () => {
+    const shuffleList = () => {                     //Randomly shuffles constellation list on 'rightSideBar' div
         const y = Object.create(props.orderState) 
         props.orderSetState(shuffle(y))
     }
@@ -59,3 +59,4 @@ const LeftSideBar = (props) => {
 }
 
 export default LeftSideBar
+

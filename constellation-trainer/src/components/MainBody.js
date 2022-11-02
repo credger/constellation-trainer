@@ -7,16 +7,14 @@ const MainBody = (props) => {
     
     const getMainBodyLabelClass = () => {
 
-        const z = props.labelState
-        const u = props.upState
-        if(z == false && u == false){
-            return 'mainBodyHideLabel'
+        if(props.labelState == false && props.upState == false){
+            return 'mainBodyHideLabel'      //css class when label toggle == false
         }
-        else if(u == true){
-            return 'upLabel'
+        else if(props.upState == true){     //props.UpState == true when 'ArrowUp' key is down
+            return 'upLabel'                //css class when 'ArrowUp' key is down               
         }
         else{
-            return 'mainBodyShowLabel'
+            return 'mainBodyShowLabel'      //css class when label toggle == true
         }
     }
 

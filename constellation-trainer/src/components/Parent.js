@@ -40,14 +40,14 @@ import ursaMinorAudio from '../sounds/ursa_minor.mp3'
 import virgoAudio from '../sounds/virgo.mp3'
 
 const Parent = () => {
-    const numbers = [...Array(30).keys()]         //Array 0:29
-    const [order, setOrder] = useState(numbers)   //Initial State 0:29
-    const [display, setDisplay] = useState(cnames[order[0]].Name)
-    const[list, setList] = useState(true)
-    const[label, setLabel] = useState(true)
-    const[up, setUp] = useState(false)  //Used to set behavior of upArrow keyDown and keyUp
-    const[lines, setLines] = useState(true)
-    const[background,setBackground] = useState(false)
+    const numbers = [...Array(30).keys()]                               //Integer array 0:29
+    const [order, setOrder] = useState(numbers)                         //Sets order of 'cnames' values
+    const [display, setDisplay] = useState(cnames[order[0]].Name)       //Sets constellation that is displayed in 'mainBody' div
+    const[list, setList] = useState(true)                               //Sets state of 'List' toggle (true/false)
+    const[label, setLabel] = useState(true)                             //Sets state of 'Labels' toggle (true/false)
+    const[lines, setLines] = useState(true)                             //Sets state of 'Lines' toggle (true/false)                          
+    const[background,setBackground] = useState(false)                   //Sets state of 'Background' toggle (true/false)
+    const[up, setUp] = useState(false)                                  //Sets behavior of labels on 'ArrowUp' event
 
     const audioFiles = [andromedaAudio, aquariusAudio, aquillaAudio, bootesAudio, cancerAudio, canisMajorAudio,  //audio files - must be same order as cnames
                         capricornusAudio, cassiopeiaAudio, cepheusAudio, cetusAudio, craterAudio, cygnusAudio,
@@ -56,11 +56,11 @@ const Parent = () => {
                         scorpiusAudio, taurusAudio, ursaMajorAudio, ursaMinorAudio, virgoAudio]  
 
 
-    useEffect(() => {      //Reset display after a sort button is clicked
+    useEffect(() => {                   //Reset display after a sort button is clicked
         setDisplay(cnames[order[0]].Name) 
     },[order])
 
-    const ref = useRef(null);  //Set focus to parent div on page load
+    const ref = useRef(null);           //Set focus to parent div on page load
     useEffect(() => {
         ref.current.focus();
     }, []);
@@ -115,11 +115,10 @@ const Parent = () => {
 
     return(
         <div id = 'parent' ref={ref} tabIndex={-1} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}>
-            <LeftSideBar orderState = {order} orderSetState = {setOrder} numberState = {numbers} listState = {list} listSetState = {setList} displaySetState = {setDisplay}
+            <LeftSideBar orderState = {order} orderSetState = {setOrder} numberState = {numbers} listState = {list} listSetState = {setList}
                 labelState = {label} labelSetState = {setLabel} linesState = {lines} linesSetState = {setLines} backgroundState = {background}
                 backgroundSetState = {setBackground}/>
-            <MainBody displayState = {display} listState = {list} labelState = {label} labelSetState = {setLabel} linesState = {lines} linesSetState = {setLines}
-                backgroundState = {background} backgroundSetState = {setBackground} upState = {up} upSetState = {setUp} orderState = {order}/>
+            <MainBody displayState = {display} labelState = {label} linesState = {lines} backgroundState = {background} upState = {up} />
             <RightSideBar orderState = {order} displayState={display} displaySetState= {setDisplay} listState = {list}/>
         </div>
     )
@@ -128,5 +127,3 @@ const Parent = () => {
 
 export default Parent
 
-
-// https://bobbyhadz.com/blog/react-onkeydown-div

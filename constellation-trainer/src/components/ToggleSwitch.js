@@ -1,5 +1,6 @@
 import styles from './ToggleSwitch.module.css'
 
+//props passed from parent to LeftSideBar to ToggleSwitch
 const ToggleSwitch = (props) => {
     
     return(

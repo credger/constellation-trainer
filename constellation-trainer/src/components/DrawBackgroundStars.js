@@ -13,9 +13,9 @@ const DrawBackgroundStars = (props) => {
 
     
         let c = null
-        for(let i=0; i<cnames.length; i++){
+        for(let i=0; i<cnames.length; i++){                 //Get abbreviation for currently displayed constellation 
             if (cnames[i]['Name'] == props.displayState){
-                c = cnames[i]['Abbr']
+                c = cnames[i]['Abbr']                       //Abbr used to filter cnames
                 break
             }
         }
@@ -23,10 +23,10 @@ const DrawBackgroundStars = (props) => {
         let backgroundStars = []
         for(let i = 0; i< backgroundCoords.length; i++){
             if(backgroundCoords[i]['C'] == c){
-                const starSize = String(Math.abs(parseFloat(backgroundCoords[i]['V'])+(-6.5))*2)+"px"  //Convert star visual magnitude to pixel dimension
-                const starRadius = String(Math.abs(parseFloat(backgroundCoords[i]['V'])+(-6.5)))+"px"
-                const px = backgroundCoords[i]['percentX']
-                const py = backgroundCoords[i]['percentY']
+                const starSize = String(Math.abs(parseFloat(backgroundCoords[i]['V'])+(-6.5))*2)+"px"  //Convert star visual magnitude to px value for height and width
+                const starRadius = String(Math.abs(parseFloat(backgroundCoords[i]['V'])+(-6.5)))+"px"  //StarRadius set to 1/2 of starSize
+                const px = backgroundCoords[i]['percentX']                                             //star x position as %
+                const py = backgroundCoords[i]['percentY']                                             //star y position as %
                 backgroundStars.push(React.createElement('div', {className: 'star', key: 'background' + String(backgroundCoords[i]['HR']),
                 style: {right: `calc(${px} - ${starRadius})`, bottom: `calc(${py} - ${starRadius})`,
                 height: starSize, width: starSize, borderRadius: starRadius }}))

@@ -14,7 +14,7 @@
     height: 100%;
     width: 18%;
     min-width: 280px;
-    min-height: 680px;
+    min-height: 700px;
 }
 
 .leftContainer{
@@ -25,7 +25,7 @@
     height: 100%;
     width: 67%;
     max-height: 100vh;
-    min-height: 680px;
+    min-height: 700px;
     min-width: 500px;
     background-color: #404040;
     background-image: url('../images/cross-stripes.png');
@@ -48,7 +48,6 @@
     align-items: center;
     height: fit-content;
     width: 90%;
-    /* background-color: burlywood; */
     margin-top: 5px;
 }
 
@@ -57,15 +56,18 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* background-color: coral; */
-    height: 80px;
+    height: 90px;
     width: 90%;
     margin: 20px 0px 20px 0px;
 }
 
 .sortButton{
     font-size: 20px;
+    padding: 4px 8px;
     border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    border: 2px solid black;
 }
 
 .sortButton:active{
@@ -77,7 +79,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    /* background-color: orchid; */
     height: fit-content;
     width: 100%;
 }
@@ -137,7 +138,6 @@
     align-items: center;
     border-top: 1px solid black;
     background-color: goldenrod;
-    /* background-color: #909090; */
 }
 
 
@@ -154,7 +154,7 @@
     width: 15%;
     overflow-y: auto;
     background-color: lightskyblue;
-    min-height: 680px;
+    min-height: 700px;
     min-width: 175px;
 }
 
@@ -168,7 +168,6 @@
 .upLabel{
     color: white;
     font-size: 40px;
-    /* margin-top: 20px; */
 }
 
 .mainBodyHideLabel{
@@ -182,76 +181,74 @@
 
 .wrapper {
     width: 100%;
-    /* whatever width you want */
     display: inline-block;
     position: relative;
-  }
-  .wrapper:after {
-    padding-top: 62.5%;
-    /* 8:5 ratio */
-    display: block;
-    content: '';
-  }
+}
+.wrapper:after {
+padding-top: 62.5%;  /* 8:5 ratio */
+display: block;
+content: '';
+}
 
-  .fixedAspectRatio {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: #00001a;
-    color: white;
-  }
+.fixedAspectRatio {
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+background-color: #00001a;
+color: white;
+}
 
-  .lineStyle{
-    stroke: darkred;
-    stroke-width: 2px;
-  }
+.lineStyle{
+stroke: darkred;
+stroke-width: 2px;
+}
 
-  h1{
-    font-size: 30px;
-    font-weight:500;
-    margin: 30px 0px 0px 0px;
-  }
+h1{
+font-size: 30px;
+font-weight:500;
+margin: 30px 0px 0px 0px;
+}
 
-  #emptyList{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height:100%;
-    width: 15%;
-    background-color: lightgray;
-  }
+#emptyList{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+height:100%;
+width: 15%;
+background-color: lightgray;
+}
 
-  .eyeOffImage{
-    height: 20px;
-    width: auto;
-  }
+.eyeOffImage{
+height: 20px;
+width: auto;
+}
 
-  .labelContainer{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 80px;
-    width: 100%;
-  }
+.labelContainer{
+position: relative;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+height: 80px;
+width: 100%;
+}
 
-  #leftSideBarFlexContainer{
-    height: 100%;
-    max-height: 800px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
+#leftSideBarFlexContainer{
+height: 100%;
+max-height: 800px;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
 
-  .leftSidebarNotes{
-    margin: 20px 10px 20px 10px;
-    font-size: 16px;
-    font-weight: 400;
-  }
+.leftSidebarNotes{
+margin: 20px 10px 20px 10px;
+font-size: 16px;
+font-weight: 400;
+}
 
