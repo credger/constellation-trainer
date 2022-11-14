@@ -12,8 +12,8 @@ Pressing the down arrow key will play an audio label.
 ## Technical Information
 Stellar data was sourced from the Yale Bright Star catalog: https://github.com/brettonw/YaleBrightStarCatalog.
 Stellar positions were converted from celestial coordinates to cartesian coordinates using a stereographic projection: https://mathworld.wolfram.com/StereographicProjection.html.
-Stellar magnitudes are reprsented by size, with brighter stars appearing larger.
-Only stars with magnitudes <6.5 are included in the application.
+Stellar magnitudes are represented by size, with brighter stars appearing larger.
+Only stars with visual magnitudes <6.5 are included in the application.
 
 
 
