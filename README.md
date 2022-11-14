@@ -3,8 +3,8 @@
 ## Introduction
 Constellation Trainer is a web application that helps users learn to identify the night sky constellations.
 The current version contains 30 constellations that are visible from the northern hemisphere.
-Toggle switches gives users the option to display constellation lines, labels, background stars, and a clickable list of the 30 included constellations. 
-Two sort buttons are available that allow the user to sort the constellations alphebetically or randomly.
+Toggle switches give users the option to display constellation lines, labels, background stars, and a clickable list of the 30 included constellations. 
+Two sort buttons are available that allow users to sort the constellations alphebetically or randomly.
 Users can navigate through the list of constellations using the left and right arrow keys.
 If labels are toggled off, labels can be quickly viewed by holding down the up arrow key.
 Pressing the down arrow key will play an audio label.  
